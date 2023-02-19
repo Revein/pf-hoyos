@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Kanit:ital@1&family=Oswald&family=Rubik&family=Teko:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Bebas+Neue&family=Kanit:ital@1&family=Oswald&family=Rubik&family=Teko:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -84,8 +84,151 @@ body {
     padding-bottom: 20px;
 }
 /* ----------------------------------------------NOTICIAS MAIN MOBILE---------------------------------------------- */
+.noticias {
+    background-image: url("../img/webimg/simple-subtle-abstract-dark-minimalism-4k-u9-1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-inline: 40px;
+}
 
+.titulo-noticias {
+    color: #EEEEEE;
+    padding-top: 20px;
+    font-family: 'Alfa Slab One', cursive;
+    text-shadow: 5px 5px 5px #303841;
+}
 
+.subtitulo-noticias {
+    color: #EAEAEA;
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: .5px;
+    padding: 5px;
+}
+
+#titulo-articulo {
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    padding-top: 20px;
+}
+
+#subtitulo-articulo {
+    color: #EEEEEE;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.6em;
+    padding-top: 5px;
+}
+
+#texto-articulo {
+    color: #EAEAEA;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1em;
+    padding-top: 3px;
+}
+
+.noticias-lol {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 450px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "titulonotlol" 
+        "riot"
+        "lmf";
+}
+
+.noticias-lol-titulo {
+    grid-area: titulonotlol;
+}
+
+.noticias-lol-riot {
+    grid-area: riot;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.noticias-lol-lmf {
+    grid-area: lmf;
+    padding-bottom: 15px;
+    border-bottom: 10px double #EAEAEA;
+}
+
+.noticias-teams {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 480px;
+    grid-row-gap: 20px;
+    grid-template-areas: 
+        "titulonotteams"
+        "primate"
+        "undead";
+}
+
+.noticias-teams-titulo {
+    grid-area: titulonotteams;
+}
+
+.noticias-teams-primate {
+    grid-area: primate;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.noticias-teams-undead {
+    grid-area: undead;
+    padding-bottom: 15px;
+    border-bottom: 10px double #EAEAEA;
+}
+
+.noticias-parches {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 480px;
+    grid-row-gap: 20px;
+    grid-template-areas: 
+        "titulonotparc"
+        "parc131"
+        "parc133";
+}
+
+.noticias-parches-titulo {
+    grid-area: titulonotparc;
+}
+
+.noticias-parches-131 {
+    grid-area: parc131;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.noticias-parches-133 {
+    grid-area: parc133;
+    padding-bottom: 15px;
+    border-bottom: 10px double #EAEAEA;
+}
+
+.noticias-esports {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 480px;
+    grid-row-gap: 20px;
+    grid-template-areas: 
+        "titulonotesp"
+        "valo"
+        "csgo";
+}
+
+.noticias-esports-titulo {
+    grid-area: titulonotesp;
+}
+
+.noticias-esports-valo {
+    grid-area: valo;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.noticias-esports-csgo {
+    grid-area: csgo;
+    padding-bottom: 15px;
+}
 
 /* ----------------------------------------------EQUIPOS MAIN MOBILE---------------------------------------------- */
 
@@ -206,9 +349,53 @@ body {
     }
 }
 /* ----------------------------------------------NOTICIAS MAIN DESKTOP---------------------------------------------- */
+@media screen and (min-width: 768px) {
+    #titulo-articulo {
+        font-size: 3.5em;
+    }
 
+    #subtitulo-articulo {
+        font-size: 3.1em;
+        padding-top: 70px;
+    }
 
+    #texto-articulo {
+        font-size: 1.6em;
+    }
 
+    #img-noticias {
+        width: 35vw;
+    }
+
+    #boton-noticias {
+        background-color: #D72323;
+        font-family: 'Kanit', sans-serif;
+        border: none;
+        color: #EAEAEA;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .noticias-lol,
+    .noticias-teams,
+    .noticias-parches,
+    .noticias-esports {
+        grid-template-rows: 60px 420px;
+    }
+
+    .noticias-lol-riot,
+    .noticias-teams-primate,
+    .noticias-parches-131,
+    .noticias-esports-valo {
+        padding-top: 25px;
+    }
+
+}
 /* ----------------------------------------------EQUIPOS MAIN DESKTOP---------------------------------------------- */
 
 
