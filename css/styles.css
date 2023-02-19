@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Kanit:ital@1&family=Oswald&family=Rubik&family=Teko:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #D72323;
+    color: #02010E;
+}
+
+/* ----------------------------------------------HEADER MOBILE--------------------------------------------- */
+.navbar {
+    background-image: url("../img/webimg/tlt5k87p8uw51.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.navbar-brand img {
+    width: 90px;
+}
+
+.navbar-brand {
+    margin-right: 0;
+    padding: 0 1em;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    color: #EEEEEE;
+    padding: .5em 1em;
+}
+
+.navbar-toggler {
+    border-color: #EEEEEE;
+    background-image: url("../img/webimg/structure-378782_1280.jpg");
+    background-position: top;
+    background-size: cover;
+}
+/* ----------------------------------------------INDEX MAIN MOBILE---------------------------------------------- */
+body {
+    padding-top: 95px;
+}
+
+.sobrenosotros {
+    background-image: url("../img/webimg/simple-subtle-abstract-dark-minimalism-4k-u9-1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-inline: 40px;
+}
+
+.titulo-index {
+    color: #EEEEEE;
+    padding-top: 20px;
+    font-family: 'Archivo Black', sans-serif;
+    text-shadow: 4px 4px 4px #303841
+}
+
+.texto-index {
+    color: #EEEEEE;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    text-align: justify;
+}
+
+.subtitulo-index {
+    color: #D72323;
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 4px 4px 4px #02010E;
+    padding: 5px;
+}
+
+.imagen-index {
+    padding-bottom: 20px;
+}
+/* ----------------------------------------------NOTICIAS MAIN MOBILE---------------------------------------------- */
+
+
+
+/* ----------------------------------------------EQUIPOS MAIN MOBILE---------------------------------------------- */
+
+
+
+/* ----------------------------------------------PARTIDOS MAIN MOBILE---------------------------------------------- */
+
+
+
+/* ----------------------------------------------TIENDA MAIN MOBILE---------------------------------------------- */
+
+
+
+/* ----------------------------------------------FOOTER MOBILE---------------------------------------------- */
+.footer {
+    background-color: #02010E;
+}
+
+.inner-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    grid-gap: 20px;
+}
+
+.footer-form {
+    color: #EEEEEE;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+}
+
+#email {
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    letter-spacing: .5px;
+    text-indent: 4%;
+}
+
+#submit {
+    font-family: 'Archivo Black', sans-serif;
+    letter-spacing: .5px;
+}
+
+.patrocinadores {
+    width: 95vw;
+    padding: 10px;
+    font-family: 'Teko', sans-serif;
+    color: #EEEEEE;
+}
+
+.patros-logos {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 0;
+}
+
+.patrocinadores img {
+    width: 65px;
+}
+
+.redes-sociales {
+    font-family: 'Rubik', sans-serif;
+    color: #EEEEEE;
+    font-size: 14px;
+}
+
+.redes-logos {
+    display: block;
+    letter-spacing: 15px;
+}
+
+.redes-logos img {
+    width: 40px;
+}
+
+.redes-logos a {
+    text-decoration: none;
+}
+
+/* ----------------------------------------------HEADER DESKTOP---------------------------------------------- */
+@media screen and (min-width: 768px) {
+    .navbar-brand img {
+        width: 150px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 3em;
+    }
+
+    .navbar .navbar-nav .nav-link.active,
+    .navbar .navbar-nav .nav-link:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700,
+                 0 0 20px #ffd700,
+                 0 0 40px #ffd700,
+                 0 0 80px #ffd700,
+                 0 0 120px #ffd700,
+                 0 0 160px #ffd700,;
+    }
+}
+/* ----------------------------------------------INDEX MAIN DESKTOP---------------------------------------------- */
+@media screen and (min-width: 768px) {
+    body {
+        padding-top: 165px;
+    }
+
+    .texto-index {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .imagen-index {
+        padding-bottom: 30px;
+    }
+}
+/* ----------------------------------------------NOTICIAS MAIN DESKTOP---------------------------------------------- */
+
+
+
+/* ----------------------------------------------EQUIPOS MAIN DESKTOP---------------------------------------------- */
+
+
+
+/* ----------------------------------------------PARTIDOS MAIN DESKTOP---------------------------------------------- */
+
+
+
+/* ----------------------------------------------TIENDA MAIN DESKTOP---------------------------------------------- */
+
+
+
+/* ----------------------------------------------FOOTER DESKTOP---------------------------------------------- */
+@media screen and (min-width: 768px) {
+    .inner-footer {
+        margin: 0 auto;
+        max-width: 1470px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 200px 100px;
+        grid-column-gap: 140px;
+        grid-row-gap: 20px;
+        grid-template-areas: 
+            "formulario sponsors"
+            "redes      redes";
+    }
+
+    .footer-form {
+        grid-area: formulario;
+    }
+
+    .patrocinadores {
+        width: 35vw;
+        grid-area: sponsors;
+    }
+
+    .patrocinadores img {
+        width: 85px;
+    }
+
+    .redes-sociales {
+        grid-area: redes;
+    }
+
+    .redes-logos img {
+        width: 60px;
+    }
+}
+
+
+
+
+
