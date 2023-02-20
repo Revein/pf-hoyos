@@ -142,9 +142,94 @@ body {
     background: linear-gradient(to right, #757f9a, #d7dde8);
 }
 /* ----------------------------------------------EQUIPOS MAIN MOBILE---------------------------------------------- */
+.equipos {
+    background-image: url("../img/webimg/336786.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 40px;
+}
 
+.titulo-equipos {
+    color: #EAEAEA;
+    font-size: 1.95em;
+    padding-top: 20px;
+    font-family: 'Alfa Slab One', cursive;
+    text-shadow: 5px 5px 5px #303841;
+}
 
+.equipos-lol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
+.logo-lol {
+    width: 50vw;
+}
+
+.roster-lol {
+    width: 80vw;
+}
+
+.players-lol {
+    border-bottom: 2px solid #EEEEEE;
+}
+
+.players-lol-titulo {
+    color: #EAEAEA;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.4em;
+}
+
+.players-lol-subtitulo {
+    color: #EAEAEA;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.35em;
+}
+
+.players-lol-team {
+    padding: 0 1em;
+    margin-bottom: 30px;
+    list-style-type: none;
+    color: #EAEAEA;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+}
+
+.equipos-valo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-valo {
+    padding-top: 20px;
+    width: 40vw;
+}
+
+.roster-valo {
+    color: #EAEAEA;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EEEEEE;
+}
+
+.equipos-csgo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-csgo {
+    width: 70vw;
+}
+
+.roster-csgo {
+    color: #EAEAEA;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.5em;
+}
 /* ----------------------------------------------PARTIDOS MAIN MOBILE---------------------------------------------- */
 
 
@@ -261,6 +346,10 @@ body {
 }
 /* ----------------------------------------------NOTICIAS MAIN DESKTOP---------------------------------------------- */
 @media screen and (min-width: 768px) {
+    .titulo-noticias {
+        font-size: 6em;
+    }
+
     #titulo-articulo {
         font-size: 3.5em;
     }
@@ -274,9 +363,42 @@ body {
     }
 }
 /* ----------------------------------------------EQUIPOS MAIN DESKTOP---------------------------------------------- */
+@media screen and (min-width: 768px) {
+    .titulo-equipos {
+        font-size: 6em;
+    }
 
+    .logo-lol {
+        width: 40vw;
+    }
 
+    .roster-lol {
+        width: 60vw;
+    }
 
+    .players-lol-titulo,
+    .players-lol-subtitulo {
+        font-size: 4em;
+    }
+
+    .players-lol-team {
+        font-size: 3.5em;
+        text-align: center;
+    }
+
+    .logo-valo {
+        width: 25vw;
+    }
+
+    .roster-valo,
+    .roster-csgo {
+        font-size: 6em;
+    }
+
+    .logo-csgo {
+        width: 55vw;
+    }
+}
 /* ----------------------------------------------PARTIDOS MAIN DESKTOP---------------------------------------------- */
 
 
@@ -321,8 +443,3 @@ body {
         width: 60px;
     }
 }
-
-
-
-
-
