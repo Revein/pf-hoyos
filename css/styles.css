@@ -235,9 +235,175 @@ body {
 
 
 /* ----------------------------------------------TIENDA MAIN MOBILE---------------------------------------------- */
+.tienda {
+    padding: 30px 0 54px;
+}
 
+.tienda .tienda-titulos {
+    margin-bottom: 40px;
+}
 
+.tienda .tienda-titulos h3 {
+    font-family: 'Teko', sans-serif;
+    font-style: italic;
+    font-size: 2.3em;
+    color: #D72323;
+    text-shadow: 1.5px 1.5px 1.5px #02010E;
+}
 
+.tienda .tienda-titulos h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    color: #02010E;
+}
+
+.tienda .item-tienda .item-tienda-parte1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.tienda .item-tienda .item-tienda-parte1::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	transition: all 0.3s;
+}
+
+.tienda .item-tienda:hover .item-tienda-parte1::before {
+	transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.tienda #item-tienda-producto1 .item-tienda-parte1::before {
+    background: url("../img/shop/Jersey23.png") no-repeat center;
+    background-size: contain;
+	transition: all 0.3s;
+}
+
+.tienda #item-tienda-producto2 .item-tienda-parte1::before {
+    background: url("../img/shop/Jersey22.png") no-repeat center;
+    background-size: contain;
+}
+
+.tienda #item-tienda-producto3 .item-tienda-parte1::before {
+    background: url("../img/shop/Hoodie.png") no-repeat center;
+    background-size: contain;
+}
+
+.tienda .item-tienda .item-tienda-parte1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.tienda .item-tienda:hover .item-tienda-parte1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.tienda .item-tienda .item-tienda-parte1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.tienda .item-tienda .item-tienda-parte1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: transparent;
+    color: #303841;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.tienda .item-tienda .item-tienda-parte1 ul li a:hover {
+    color: #D72323;
+}
+
+.tienda .item-tienda .item-tienda-parte2 h3 {
+    text-align: center;
+    color: #D72323;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+
+.tienda .item-tienda .item-tienda-parte2 h4 {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5em;
+}
+
+#item-tienda-producto1,
+#item-tienda-producto2 {
+    border-bottom: 1px solid #303841;
+    padding-bottom: 20px;
+    margin-bottom: 26px;
+}
+
+.contenedor-jersey23,
+.contenedor-jersey22 {
+    padding-bottom: 20px;
+    margin-bottom: 26px;
+}
+
+#boton-acordeon {
+    background-color: #303841;
+    color: #EAEAEA;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2em;
+}
+
+.texto-acordeon {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+}
+
+.texto-acordeon ul li ul {
+    list-style-type: disc;
+}
+
+.texto-talle {
+    background-color: #303841;
+    color: #EAEAEA;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8em;
+}
+
+.texto-drop {
+    background-color: #EAEAEA;
+    color: #303841;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8em;
+}
+
+.tienda-subtitulos {
+    color: #303841;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.8em;
+}
+
+.tienda-subtitulos-texto {
+    color: #303841;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+}
+
+.tienda-subtitulos-texto ul li {
+    list-style-type: disc;
+}
 /* ----------------------------------------------FOOTER MOBILE---------------------------------------------- */
 .footer {
     background-color: #02010E;
@@ -404,9 +570,47 @@ body {
 
 
 /* ----------------------------------------------TIENDA MAIN DESKTOP---------------------------------------------- */
+@media screen and (min-width: 768px) {
+    .tienda .tienda-titulos h3 {
+        font-size: 5em;
+    }
 
+    .tienda .tienda-titulos h2 {
+        font-size: 4em;
+    }
 
+    #item-tienda-producto3 {
+        border-bottom: 1px solid #303841;
+        padding-bottom: 20px;
+        margin-bottom: 26px;
+    }
 
+    .tienda-subtitulos {
+        font-size: 3em;
+    }
+
+    .tienda-subtitulos-texto {
+        padding: 0 2em;
+        font-size: 2em;
+    }
+
+    .tienda-card h5 {
+        color: #303841;
+        font-family: 'Teko', sans-serif;
+        font-size: 2em;
+    }
+
+    .tienda-card-texto {
+        color: #303841;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.25em;
+    }
+
+    .tienda-card-texto ul li {
+        list-style-type: disc;
+    }
+    
+}
 /* ----------------------------------------------FOOTER DESKTOP---------------------------------------------- */
 @media screen and (min-width: 768px) {
     .inner-footer {

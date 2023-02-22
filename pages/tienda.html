@@ -7,6 +7,7 @@
     <title>SHOP | Spartan Gaming | Esports Team</title>
     <link rel="icon" href="../img/teamsicons/SG ICON.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
     
@@ -16,12 +17,12 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top overflow-hidden">
             <div class="container-fluid">
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <a class="navbar-brand d-md-none" href="../index.html">
                     <img src="../img/teamsicons/SG ICON.png" alt="Logo Spartan Gaming">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
@@ -48,279 +49,281 @@
     <!-- CUERPO PAGINA -->
     <main>
         <section>
-            <img src="../img/webimg/jersey oficial.jpg" alt="Jersey Spartan Gaming 2023">
+            <img src="../img/webimg/jersey oficial.jpg" class="mx-auto d-block img-fluid" alt="Jersey Spartan Gaming 2023">
+        </section>
+        <section class="tienda">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-8">
+                        <div class="tienda-titulos">
+                            <h3>SPARTAN GAMING OFFICIAL SHOP</h3>
+                            <h2>Productos Populares</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 contenedor-jersey23">
+                        <div id="item-tienda-producto1" class="item-tienda">
+                            <div class="item-tienda-parte1">
+                                <ul>
+                                    <li><a href="#"><i class="bi bi-suit-heart-fill display-3"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="item-tienda-parte2">
+                                <h3>SPARTAN GAMING - PRO JERSEY 22/23</h3>
+                                <h4>ARS$ 6.000,00</h4>
+                            </div>
+                        </div>
+                        <div class="card mb-3 d-none d-md-block">
+                            <div class="card-body tienda-card">
+                                <h5 class="card-title">DESCRIPCION DEL PRODUCTO</h5>
+                                <p class="card-text">
+                                    <ul class="tienda-card-texto">
+                                        <li>Camiseta Oficial Spartan Gaming - Temporada 2022-2023</li>
+                                        <li>Tela 100% poliester Dry-Fit</li>
+                                        <li>Detalles en tela microperforada</li>
+                                        <li>Diseño 100% sublimado</li>
+                                        <li>Cuello en V</li>
+                                        <li>Instrucciones de Lavado:
+                                            <ul>
+                                                <li>Lavar del réves</li>
+                                                <li>No planchar</li>
+                                                <li>Lavar a 30°</li>
+                                                <li>Centrifugado suave</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion mb-3 d-md-none" id="descripcion-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" id="boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        DESCRIPCION DEL PRODUCTO
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#descripcion-item">
+                                    <div class="accordion-body texto-acordeon">
+                                        <ul>
+                                            <li>Camiseta Oficial Spartan Gaming - Temporada 2022-2023</li>
+                                            <li>Tela 100% poliester Dry-Fit</li>
+                                            <li>Detalles en tela microperforada</li>
+                                            <li>Diseño 100% sublimado</li>
+                                            <li>Cuello en V</li>
+                                            <li>Instrucciones de Lavado:
+                                                <ul>
+                                                    <li>Lavar del réves</li>
+                                                    <li>No planchar</li>
+                                                    <li>Lavar a 30°</li>
+                                                    <li>Centrifugado suave</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text texto-talle" for="talle-item">TALLE</label>
+                            <select class="form-select texto-drop" id="talle-item">
+                                <option selected>ELEGIR...</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                                <option value="4">XL</option>
+                                <option value="5">XXL</option>
+                                <option value="6">XXXL</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text texto-talle" for="cantidad-item">CANTIDAD</label>
+                            <select class="form-select texto-drop" id="cantidad-item">
+                                <option selected>ELEGIR...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-danger mx-auto d-block" id="boton-noticias">COMPRAR</button>
+                    </div>
+                    <div class="col-md-4 contenedor-jersey22">
+                        <div id="item-tienda-producto2" class="item-tienda">
+                            <div class="item-tienda-parte1">
+                                <ul>
+                                    <li><a href="#"><i class="bi bi-suit-heart-fill display-3"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="item-tienda-parte2">
+                                <h3>SPARTAN GAMING - PRO JERSEY 21/22</h3>
+                                <h4>ARS$ 5.500,00</h4>
+                            </div>
+                        </div>
+                        <div class="card mb-3 d-none d-md-block">
+                            <div class="card-body tienda-card">
+                                <h5 class="card-title">DESCRIPCION DEL PRODUCTO</h5>
+                                <p class="card-text">
+                                    <ul class="tienda-card-texto">
+                                        <li>Camiseta Oficial Spartan Gaming - Temporada 2021-2022</li>
+                                        <li>Tela 100% poliester Dry-Fit</li>
+                                        <li>Diseño 100% sublimado</li>
+                                        <li>Cuello en V</li>  
+                                        <li>Instrucciones de Lavado:
+                                            <ul>
+                                                <li>Lavar del réves</li>
+                                                <li>No planchar</li>
+                                                <li>Lavar a 30°</li>
+                                                <li>Centrifugado suave</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion mb-3 d-md-none" id="descripcion-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" id="boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        DESCRIPCION DEL PRODUCTO
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#descripcion-item">
+                                    <div class="accordion-body texto-acordeon">
+                                        <ul>
+                                            <li>Camiseta Oficial Spartan Gaming - Temporada 2021-2022</li>
+                                            <li>Tela 100% poliester Dry-Fit</li>
+                                            <li>Diseño 100% sublimado</li>
+                                            <li>Cuello en V</li>  
+                                            <li>Instrucciones de Lavado:
+                                                <ul>
+                                                    <li>Lavar del réves</li>
+                                                    <li>No planchar</li>
+                                                    <li>Lavar a 30°</li>
+                                                    <li>Centrifugado suave</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text texto-talle" for="talle-item">TALLE</label>
+                            <select class="form-select texto-drop" id="talle-item">
+                                <option selected>ELEGIR...</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                                <option value="4">XL</option>
+                                <option value="5">XXL</option>
+                                <option value="6">XXXL</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text texto-talle" for="cantidad-item">CANTIDAD</label>
+                            <select class="form-select texto-drop" id="cantidad-item">
+                                <option selected>ELEGIR...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-danger mx-auto d-block" id="boton-noticias">COMPRAR</button>
+                    </div>
+                    <div class="col-md-4 contenedor-hoodie">
+                        <div id="item-tienda-producto3" class="item-tienda">
+                            <div class="item-tienda-parte1">
+                                <ul>
+                                    <li><a href="#"><i class="bi bi-suit-heart-fill display-3"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="item-tienda-parte2">
+                                <h3>SPARTAN GAMING - HOODIE 2023</h3>
+                                <h4>ARS$ 6.500,00</h4>
+                            </div>
+                        </div>
+                        <div class="card mb-3 d-none d-md-block">
+                            <div class="card-body tienda-card">
+                                <h5 class="card-title">DESCRIPCION DEL PRODUCTO</h5>
+                                <p class="card-text">
+                                    <ul class="tienda-card-texto">
+                                        <li>Buzo canguro con capucha</li>   
+                                        <li>Tela 100% algodón</li>
+                                        <li>Estilo unisex de corte recto</li> 
+                                        <li>Instrucciones de Lavado:
+                                            <ul>
+                                                <li>Lavar del réves</li>
+                                                <li>Lavar con agua fría</li>    
+                                                <li>Usar detergente suave</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion mb-3 d-md-none" id="descripcion-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" id="boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        DESCRIPCION DEL PRODUCTO
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#descripcion-item">
+                                    <div class="accordion-body texto-acordeon">
+                                        <ul>
+                                            <li>Buzo canguro con capucha</li>   
+                                            <li>Tela 100% algodón</li>
+                                            <li>Estilo unisex de corte recto</li> 
+                                            <li>Instrucciones de Lavado:
+                                                <ul>
+                                                    <li>Lavar del réves</li>
+                                                    <li>Lavar con agua fría</li>    
+                                                    <li>Usar detergente suave</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text texto-talle" for="talle-item">TALLE</label>
+                            <select class="form-select texto-drop" id="talle-item">
+                                <option selected>ELEGIR...</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                                <option value="4">XL</option>
+                                <option value="5">XXL</option>
+                                <option value="6">XXXL</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text texto-talle" for="cantidad-item">CANTIDAD</label>
+                            <select class="form-select texto-drop" id="cantidad-item">
+                                <option selected>ELEGIR...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-danger mx-auto d-block" id="boton-noticias">COMPRAR</button>
+                    </div>
+                </div>
+            </div>
         </section>
         <section>
             <article>
-                <div>
-                    <img src="../img/shop/Jersey Titular.png" alt="Camiseta Titular Spartan Gaming 2023">
-                </div>
-                <form>
-                    <div>
-                        <h2>
-                            SPARTAN GAMING - PRO JERSEY 22/23
-                        </h2>
-                        <span>ARS$ 6.000,00</span>
-                    </div>
-                    <div>
-                        <h3>
-                            TALLE
-                        </h3>
-                        <ul>
-                            <li>
-                                <input type="radio" id="Opcion1-S" name="opciones[TALLE]" value="S" checked>
-                                <label for="Opcion1-S">
-                                    S
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-M" name="opciones[TALLE]" value="M" checked>
-                                <label for="Opcion1-M">
-                                    M
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-L" name="opciones[TALLE]" value="L" checked>
-                                <label for="Opcion1-L">
-                                    L
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XL" name="opciones[TALLE]" value="XL" checked>
-                                <label for="Opcion1-XL">
-                                    XL
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XXL" name="opciones[TALLE]" value="XXL" checked>
-                                <label for="Opcion1-XXL">
-                                    XXL
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XXXL" name="opciones[TALLE]" value="XXXL" checked>
-                                <label for="Opcion1-XXXL">
-                                    XXXL
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="cantidad">
-                                CANTIDAD:
-                            </label>
-                            <input type="number" id="cantidad" name="cantidad" min="1" max="5">
-                        </div>
-                        <div>
-                            <button type="submit">
-                                <span>COMPRAR</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <div>
-                    <h4>
-                        DESCRIPCION
-                    </h4>
-                    <ul>
-                        <li>Camiseta Oficial Spartan Gaming - Temporada 2022-2023</li>   
-                        <li>Tela 100% poliester Dry-Fit</li>
-                        <li>Detalles en tela microperforada</li>
-                        <li>Diseño 100% sublimado</li>
-                        <li>Cuello en V</li>  
-                        <li>Instrucciones de Lavado
-                            <ul>
-                                <li>Lavar del réves</li>
-                                <li>No planchar</li>    
-                                <li>Lavar a 30°</li>
-                                <li>Centrifugado suave</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <img src="../img/shop/Jersey Alternativa.png" alt="Camiseta Titular Spartan Gaming 2022">
-                </div>
-                <form>
-                    <div>
-                        <h2>
-                            SPARTAN GAMING - PRO JERSEY 21/22
-                        </h2>
-                        <span>ARS$ 5.500,00</span>
-                    </div>
-                    <div>
-                        <h3>
-                            TALLE
-                        </h3>
-                        <ul>
-                            <li>
-                                <input type="radio" id="Opcion1-S" name="opciones[TALLE]" value="S" checked>
-                                <label for="Opcion1-S">
-                                    S
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-M" name="opciones[TALLE]" value="M" checked>
-                                <label for="Opcion1-M">
-                                    M
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-L" name="opciones[TALLE]" value="L" checked>
-                                <label for="Opcion1-L">
-                                    L
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XL" name="opciones[TALLE]" value="XL" checked>
-                                <label for="Opcion1-XL">
-                                    XL
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XXL" name="opciones[TALLE]" value="XXL" checked>
-                                <label for="Opcion1-XXL">
-                                    XXL
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XXXL" name="opciones[TALLE]" value="XXXL" checked>
-                                <label for="Opcion1-XXXL">
-                                    XXXL
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="cantidad">
-                                CANTIDAD:
-                            </label>
-                            <input type="number" id="cantidad" name="cantidad" min="1" max="5">
-                        </div>
-                        <div>
-                            <button type="submit">
-                                <span>COMPRAR</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <div>
-                    <h4>
-                        DESCRIPCION
-                    </h4>
-                    <ul>
-                        <li>Camiseta Oficial Spartan Gaming - Temporada 2021-2022</li>   
-                        <li>Tela 100% poliester Dry-Fit</li>
-                        <li>Diseño 100% sublimado</li>
-                        <li>Cuello en V</li>  
-                        <li>Instrucciones de Lavado
-                            <ul>
-                                <li>Lavar del réves</li>
-                                <li>No planchar</li>    
-                                <li>Lavar a 30°</li>
-                                <li>Centrifugado suave</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <img src="../img/shop/Hoodie.png" alt="Hoodie Spartan Gaming 2023">
-                </div>
-                <form>
-                    <div>
-                        <h2>
-                            SPARTAN GAMING - HOODIE 2023
-                        </h2>
-                        <span>ARS$ 5.000,00</span>
-                    </div>
-                    <div>
-                        <h3>
-                            TALLE
-                        </h3>
-                        <ul>
-                            <li>
-                                <input type="radio" id="Opcion1-S" name="opciones[TALLE]" value="S" checked>
-                                <label for="Opcion1-S">
-                                    S
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-M" name="opciones[TALLE]" value="M" checked>
-                                <label for="Opcion1-M">
-                                    M
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-L" name="opciones[TALLE]" value="L" checked>
-                                <label for="Opcion1-L">
-                                    L
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XL" name="opciones[TALLE]" value="XL" checked>
-                                <label for="Opcion1-XL">
-                                    XL
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XXL" name="opciones[TALLE]" value="XXL" checked>
-                                <label for="Opcion1-XXL">
-                                    XXL
-                                </label>
-                            </li>
-                            <li>
-                                <input type="radio" id="Opcion1-XXXL" name="opciones[TALLE]" value="XXXL" checked>
-                                <label for="Opcion1-XXXL">
-                                    XXXL
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="cantidad">
-                                CANTIDAD:
-                            </label>
-                            <input type="number" id="cantidad" name="cantidad" min="1" max="5">
-                        </div>
-                        <div>
-                            <button type="submit">
-                                <span>COMPRAR</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <div>
-                    <h4>
-                        DESCRIPCION
-                    </h4>
-                    <ul>
-                        <li>Buzo canguro con capucha</li>   
-                        <li>Tela 100% algodón</li>
-                        <li>Estilo unisex de corte recto</li> 
-                        <li>Instrucciones de Lavado
-                            <ul>
-                                <li>Lavar del réves</li>
-                                <li>Lavar con agua fría</li>    
-                                <li>Usar detergente suave</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h4>
+                <h4 class="text-decoration-underline tienda-subtitulos">
                     METODOS DE PAGO
                 </h4>
-                <ul>
+                <ul class="tienda-subtitulos-texto">
                     <li>
                         Tarjetas de Crédito: VISA / MASTERCARD / AMERICAN EXPRESS
                     </li>
@@ -336,10 +339,10 @@
                 </ul>
             </article>
             <article>
-                <h4>
+                <h4 class="text-decoration-underline tienda-subtitulos">
                     ENVIOS
                 </h4>
-                <ul>
+                <ul class="tienda-subtitulos-texto">
                     <li>
                         Envíos a cualquier parte de Argentina a través de Andreani
                     </li>
@@ -347,22 +350,22 @@
                         Tiempo estimado de llegada del envío:
                         <ul>
                             <li>
-                                <span>AMBA</span>: 3-5 días hábiles
+                                <span class="text-decoration-underline">AMBA</span>: 3-5 días hábiles
                             </li>
                             <li>
-                                <span>Interior del País</span>: 7-10 días hábiles
+                                <span class="text-decoration-underline">Interior del País</span>: 7-10 días hábiles
                             </li>
                         </ul>
                     </li>
                 </ul>
             </article>
             <article>
-                <h4>
+                <h4 class="text-decoration-underline tienda-subtitulos">
                     POLÍTICA DE CAMBIOS
                 </h4>
-                <ul>
+                <ul class="tienda-subtitulos-texto">
                     <li>
-                        Ante la necesidad de solicitar un cambio por algún desperfecto de fábrica en la prenda o debido al talle de la misma, contactarse con <a href="mailto: soporte@spartangaming.com">soporte@spartangaming.com</a>
+                        Ante la necesidad de solicitar un cambio por algún desperfecto de fábrica en la prenda o debido al talle de la misma, contactarse con <a class="text-danger" href="mailto: soporte@spartangaming.com">soporte@spartangaming.com</a>
                     </li>
                 </ul>
             </article>
