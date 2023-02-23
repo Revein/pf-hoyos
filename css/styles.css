@@ -231,9 +231,88 @@ body {
     font-size: 2.5em;
 }
 /* ----------------------------------------------PARTIDOS MAIN MOBILE---------------------------------------------- */
+.partidos {
+    background-image: url("../img/webimg/336786.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 40px;
+}
 
+.partidos h1 {
+    color: #EEEEEE;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2.25em;
+    text-shadow: 5px 5px 5px #303841;
+}
 
+.partidos-titulo-comp {
+    color: #EAEAEA;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 2.2em;
+}
 
+.partidos-contenedor h4 {
+    color: #EAEAEA;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 20px;
+}
+
+.partidos-match {
+    border-radius: 10px;
+    background: linear-gradient(to right, #757f9a, #d7dde8);
+}
+
+.partidos-match-equipo h5 {
+    color: #02010E;
+    font-size: 1em;
+    font-family: 'Teko', sans-serif;
+}
+
+.partidos-match-resultado {
+    color: #02010E;
+    font-family: 'Oswald', sans-serif;
+}
+
+.partidos-match-resultado-numero {
+    color: #D72323;
+}
+
+.partidos-sintoniza {
+    text-align: center;
+    color: #EAEAEA;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.partidos-sintoniza h2 {
+    font-size: 2em;
+}
+
+.partidos-sintoniza ul {
+    padding: 0 1em;
+}
+
+.partidos-sintoniza ul li {
+    font-size: 1.8em;
+    list-style-type: none;
+}
+
+.partidos-sintoniza ul li a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.partidos-lmf {
+    text-align: center;
+    color: #EAEAEA;
+    font-family: 'Oswald', sans-serif;
+}
+
+.partidos-lmf a img {
+    width: 50%;
+}
 /* ----------------------------------------------TIENDA MAIN MOBILE---------------------------------------------- */
 .tienda {
     padding: 30px 0 54px;
@@ -566,9 +645,79 @@ body {
     }
 }
 /* ----------------------------------------------PARTIDOS MAIN DESKTOP---------------------------------------------- */
+@media screen and (min-width: 768px) {
+    .partidos h1 {
+        font-size: 6em;
+    }
 
+    .partidos-titulo-comp {
+        font-size: 5em;
+    }
 
+    .partidos-contenedor h4 {
+        padding-top: 40px;
+        font-size: 3em;
+    }
 
+    .partidos-match-equipo h5 {
+        font-size: 2.5em;
+    }
+
+    .partidos-match-resultado {
+        font-size: 3em;
+    }
+
+    .partidos-sintoniza {
+        padding-bottom: 100px;
+    }
+
+    .partidos-sintoniza h2 {
+        font-size: 4em;
+    }
+
+    .partidos-sintoniza ul li {
+        font-size: 4em;
+    }
+
+    .partidos-twitch:hover {
+        color: #9146FF;
+        text-shadow: 0 0 10px #9146FF,
+                     0 0 20px #9146FF,
+                     0 0 40px #9146FF,
+                     0 0 80px #9146FF,
+                     0 0 120px #9146FF,
+                     0 0 160px #9146FF,;
+    }
+
+    .partidos-flow:hover {
+        color: #13C08D;
+        text-shadow: 0 0 10px #13C08D,
+                     0 0 20px #13C08D,
+                     0 0 40px #13C08D,
+                     0 0 80px #13C08D,
+                     0 0 120px #13C08D,
+                     0 0 160px #13C08D,;
+    }
+
+    .partidos-lmf h3 {
+        padding-top: 50px;
+        font-size: 4em;
+    }
+
+    .partidos-lmf a img {
+        width: 15%;
+        height: 15%;
+        transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+    }
+
+    .partidos-lmf a img:hover{
+        transform: scale3d(1.5, 1.5, 0.3);
+        -webkit-transform: scale3d(1.5, 1.5, 0.3);
+        -moz-transform: scale3d(1.5, 1.5, 0.3);
+    }
+}
 /* ----------------------------------------------TIENDA MAIN DESKTOP---------------------------------------------- */
 @media screen and (min-width: 768px) {
     .tienda .tienda-titulos h3 {
