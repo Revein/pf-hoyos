@@ -304,6 +304,14 @@ body {
     text-decoration: none;
 }
 
+.partidos-twitch i {
+    color: #9146FF;
+}
+
+.partidos-flow i {
+    color: #13C08D;
+}
+
 .partidos-lmf {
     text-align: center;
     color: #EAEAEA;
@@ -311,7 +319,7 @@ body {
 }
 
 .partidos-lmf a img {
-    width: 50%;
+    width: 40%;
 }
 /* ----------------------------------------------TIENDA MAIN MOBILE---------------------------------------------- */
 .tienda {
@@ -468,6 +476,20 @@ body {
     font-size: 1.8em;
 }
 
+.boton-compra {
+    background-color: #D72323;
+    font-family: 'Kanit', sans-serif;
+    border: none;
+    color: #EAEAEA;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 .tienda-subtitulos {
     color: #303841;
     font-family: 'Bebas Neue', cursive;
@@ -552,9 +574,174 @@ body {
 .redes-logos a {
     text-decoration: none;
 }
+/* ----------------------------------------------TABLET---------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    /* ----------------------------------------------HEADER---------------------------------------------- */
+    .navbar-brand img {
+        width: 110px;
+    }
 
-/* ----------------------------------------------HEADER DESKTOP---------------------------------------------- */
-@media screen and (min-width: 768px) {
+    .navbar .navbar-nav .nav-link {
+        font-size: 2.5em;
+    }
+    /* ----------------------------------------------INDEX----------------------------------------------- */
+    body {
+        padding-top: 110px;
+    }
+
+    .texto-index {
+        font-size: 1.75em;
+        text-align: center;
+    }
+
+    .imagen-index {
+        padding-bottom: 20px;
+    }
+    /* ---------------------------------------------NOTICIAS--------------------------------------------- */
+    #titulo-articulo {
+        font-size: 2.75em;
+    }
+
+    #subtitulo-articulo {
+        font-size: 2.25em;
+    }
+
+    #texto-articulo {
+        font-size: 2em;
+    }
+
+    #boton-noticias {
+        font-size: 25px;
+    }
+    /* ----------------------------------------------EQUIPOS--------------------------------------------- */
+    .titulo-equipos {
+        font-size: 4em;
+    }
+
+    .logo-lol {
+        width: 50vw;
+    }
+
+    .roster-lol {
+        width: 80vw;
+    }
+
+    .players-lol-titulo,
+    .players-lol-subtitulo {
+        font-size: 3em;
+    }
+
+    .players-lol-team {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .logo-valo {
+        width: 40vw;
+    }
+
+    .roster-valo,
+    .roster-csgo {
+        font-size: 4em;
+        padding-bottom: 10px;
+    }
+
+    .logo-csgo {
+        width: 65vw;
+    }
+    /* ---------------------------------------------PARTIDOS--------------------------------------------- */
+    .partidos h1 {
+        font-size: 4em;
+    }
+
+    .partidos-titulo-comp {
+        font-size: 3.5em;
+    }
+
+    .partidos-contenedor h4 {
+        padding-top: 40px;
+        font-size: 2.5em;
+    }
+
+    .partidos-match-equipo h5 {
+        font-size: 2em;
+    }
+
+    .partidos-match-resultado {
+        font-size: 2em;
+    }
+
+    .partidos-sintoniza {
+        padding-bottom: 60px;
+    }
+
+    .partidos-sintoniza h2 {
+        font-size: 4em;
+    }
+
+    .partidos-sintoniza ul li {
+        font-size: 3.5em;
+    }
+
+    .partidos-lmf h3 {
+        padding-top: 50px;
+        font-size: 4em;
+    }
+
+    .partidos-lmf a img {
+        width: 35%;
+    }
+    /* ----------------------------------------------TIENDA---------------------------------------------- */
+    .tienda .tienda-titulos h3 {
+        font-size: 4em;
+    }
+
+    .tienda .tienda-titulos h2 {
+        font-size: 3.5em;
+    }
+
+    .tienda .item-tienda .item-tienda-parte2 h3 {
+        font-size: 3em;
+    }
+
+    .tienda .item-tienda .item-tienda-parte2 h4 {
+        font-size: 2em;
+    }
+
+    #item-tienda-producto3 {
+        border-bottom: 1px solid #303841;
+        padding-bottom: 20px;
+        margin-bottom: 26px;
+    }
+
+    .tienda-subtitulos {
+        font-size: 2.5em;
+    }
+
+    .tienda-subtitulos-texto {
+        padding: 0 2em;
+        font-size: 1.75em;
+    }
+    /* ----------------------------------------------FOOTER---------------------------------------------- */
+    #email {
+        font-size: 25px;
+    }
+
+    .patrocinadores h2 {
+        font-size: 2.25em;
+    }
+
+    .patrocinadores img {
+        width: 80px;
+    }
+
+    .redes-logos img {
+        width: 50px;
+    }
+}
+/* ----------------------------------------------DESKTOP---------------------------------------------- */
+@media screen and (min-width: 1200px) {
+    /* ----------------------------------------------HEADER---------------------------------------------- */
     .navbar-brand img {
         width: 150px;
     }
@@ -573,9 +760,7 @@ body {
                  0 0 120px #ffd700,
                  0 0 160px #ffd700,;
     }
-}
-/* ----------------------------------------------INDEX MAIN DESKTOP---------------------------------------------- */
-@media screen and (min-width: 768px) {
+    /* ----------------------------------------------INDEX----------------------------------------------- */
     body {
         padding-top: 165px;
     }
@@ -588,9 +773,7 @@ body {
     .imagen-index {
         padding-bottom: 30px;
     }
-}
-/* ----------------------------------------------NOTICIAS MAIN DESKTOP---------------------------------------------- */
-@media screen and (min-width: 768px) {
+    /* ---------------------------------------------NOTICIAS--------------------------------------------- */
     .titulo-noticias {
         font-size: 6em;
     }
@@ -606,9 +789,23 @@ body {
     #texto-articulo {
         font-size: 1.6em;
     }
-}
-/* ----------------------------------------------EQUIPOS MAIN DESKTOP---------------------------------------------- */
-@media screen and (min-width: 768px) {
+
+    #boton-noticias {
+        font-size: 30px;
+        width: 15%;
+        height: 15%;
+        transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+    }
+
+    #boton-noticias:hover {
+        box-shadow: 0 8px 8px 0 #303841,0 8px 8px 0 #02010E;
+        transform: translate(0px,5px);
+        -webkit-transform: translate(0px,5px);
+        -moz-transform:translate(0px,5px);
+    }
+    /* ----------------------------------------------EQUIPOS--------------------------------------------- */
     .titulo-equipos {
         font-size: 6em;
     }
@@ -643,9 +840,7 @@ body {
     .logo-csgo {
         width: 55vw;
     }
-}
-/* ----------------------------------------------PARTIDOS MAIN DESKTOP---------------------------------------------- */
-@media screen and (min-width: 768px) {
+    /* ---------------------------------------------PARTIDOS--------------------------------------------- */
     .partidos h1 {
         font-size: 6em;
     }
@@ -679,24 +874,18 @@ body {
         font-size: 4em;
     }
 
-    .partidos-twitch:hover {
-        color: #9146FF;
-        text-shadow: 0 0 10px #9146FF,
-                     0 0 20px #9146FF,
-                     0 0 40px #9146FF,
-                     0 0 80px #9146FF,
-                     0 0 120px #9146FF,
-                     0 0 160px #9146FF,;
+    .partidos-twitch,
+    .partidos-flow {
+        transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
     }
 
+    .partidos-twitch:hover,
     .partidos-flow:hover {
-        color: #13C08D;
-        text-shadow: 0 0 10px #13C08D,
-                     0 0 20px #13C08D,
-                     0 0 40px #13C08D,
-                     0 0 80px #13C08D,
-                     0 0 120px #13C08D,
-                     0 0 160px #13C08D,;
+        transform: scale3d(1.5, 1.5, 0.3);
+        -webkit-transform: scale3d(1.5, 1.5, 0.3);
+        -moz-transform: scale3d(1.5, 1.5, 0.3);
     }
 
     .partidos-lmf h3 {
@@ -717,9 +906,7 @@ body {
         -webkit-transform: scale3d(1.5, 1.5, 0.3);
         -moz-transform: scale3d(1.5, 1.5, 0.3);
     }
-}
-/* ----------------------------------------------TIENDA MAIN DESKTOP---------------------------------------------- */
-@media screen and (min-width: 768px) {
+    /* ----------------------------------------------TIENDA---------------------------------------------- */
     .tienda .tienda-titulos h3 {
         font-size: 5em;
     }
@@ -732,6 +919,20 @@ body {
         border-bottom: 1px solid #303841;
         padding-bottom: 20px;
         margin-bottom: 26px;
+    }
+
+    .boton-compra {
+        font-size: 30px;
+        transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+    }
+
+    .boton-compra:hover {
+        box-shadow: 0 8px 8px 0 #303841,0 8px 8px 0 #02010E;
+        transform: translate(0px,5px);
+        -webkit-transform: translate(0px,5px);
+        -moz-transform:translate(0px,5px);
     }
 
     .tienda-subtitulos {
@@ -758,34 +959,39 @@ body {
     .tienda-card-texto ul li {
         list-style-type: disc;
     }
-    
-}
-/* ----------------------------------------------FOOTER DESKTOP---------------------------------------------- */
-@media screen and (min-width: 768px) {
+    /* ----------------------------------------------FOOTER---------------------------------------------- */
     .inner-footer {
-        margin: 0 auto;
-        max-width: 1470px;
+        padding-top: 10px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 200px 100px;
-        grid-column-gap: 140px;
-        grid-row-gap: 20px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 20px;
+        justify-items: center;
         grid-template-areas: 
             "formulario sponsors"
             "redes      redes";
     }
 
     .footer-form {
+        max-width: 35vw;
         grid-area: formulario;
     }
 
+    #email {
+        font-size: 25px;
+    }
+
     .patrocinadores {
-        width: 35vw;
+        max-width: 35vw;
         grid-area: sponsors;
     }
 
+    .patrocinadores h2 {
+        font-size: 2.5em;
+    }
+
     .patrocinadores img {
-        width: 85px;
+        width: 90px;
     }
 
     .redes-sociales {
