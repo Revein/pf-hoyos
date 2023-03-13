@@ -1,0 +1,141 @@
+@use 'variables';
+@use 'mixins' as *;
+
+body {
+    padding-top: 95px;
+
+    @include tablet {
+        padding-top: 120px;
+    }
+
+    @include desktop {
+        padding-top: 165px;
+    }
+}
+
+.sobrenosotros {
+    background-image: url("../img/webimg/336786.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 40px;
+    position: relative;
+
+    h1 {
+        color: variables.$mainWhite;
+        font-size: variables.$sizeTitulo;
+        padding-top: 20px;
+        font-family: variables.$fontArchivo;
+        text-shadow: variables.$sombraTitulo;
+
+        @include tablet {
+            font-size: 5em;
+        }
+
+        @include desktop {
+            font-size: 6em;
+        }
+    }
+
+    .texto-index {
+        color: variables.$subWhite;
+        font-family: variables.$fontOswald;
+        font-size: 1.25em;
+        text-align: justify;
+
+        @include tablet {
+            font-size: variables.$sizeSubtitulo;
+            text-align: center;
+        }
+
+        @include desktop {
+            font-size: 2.25em;
+            text-align: center;
+        }
+
+        .texto-index-prf {
+            background-image: url("../img/webimg/simple-subtle-abstract-dark-minimalism-4k-u9-1920x1080.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+            margin: 2rem auto 0 auto;
+            border-radius: 8px;
+
+            @include tablet {
+                margin: 2rem auto 5rem auto;
+            }
+
+            @include desktop {
+                flex-direction: row;
+                padding: 40px;
+                width: 90%;
+                margin: 2rem auto 8rem auto;
+            }
+
+            img {
+                @include desktop {
+                    width: 50%;
+                }
+            }
+        }
+    }
+    
+    .pulsate-bck {
+        color: variables.$mainRed;
+        font-family: variables.$fontKanit;
+        letter-spacing: 1px;
+        text-shadow: 4px 4px 4px variables.$mainBlack;
+        padding: 5px;
+        margin: 20px auto 50px;
+        -webkit-animation:pulsate-bck 3.5s ease-in-out infinite both;
+        animation:pulsate-bck 3.5s ease-in-out infinite both;
+
+        @include tablet {
+            margin: 20px auto 90px;
+        }
+
+        @include desktop {
+            margin: 20px auto 130px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+
+            @include tablet {
+                font-size: 6em;
+            }
+
+            @include desktop {
+                font-size: 8em;
+            }
+        }
+    }
+
+    @-webkit-keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}    
+}
+
+.custom-shape-divider-bottom-1678596851 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 50px;
+        transform: rotateY(180deg);
+    }
+
+    .shape-fill {
+        fill: variables.$mainBlack;
+    }
+}

@@ -1,0 +1,150 @@
+@use 'variables';
+@use 'mixins' as *;
+
+.equipos {
+    background-image: url("../img/webimg/336786.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 40px;
+    position: relative;
+
+    h1 {
+        color: variables.$mainWhite;
+        font-family: variables.$fontAlfa;
+        font-size: variables.$sizeTitulo;
+        padding-top: 20px;
+        text-shadow: variables.$sombraTitulo;
+        text-align: center;
+
+        @include tablet {
+            font-size: 4em;
+        }
+
+        @include desktop {
+            font-size: 6em;
+        }
+    }
+
+    .equipos-lol {
+        @include flex-column-gap;
+
+        .logo-lol {
+            width: 50vw;
+
+            @include desktop {
+                width: 40vw;
+            }
+        }
+
+        .roster-lol {
+            width: 80vw;
+
+            @include desktop {
+                width: 60vw;
+            }
+        }
+
+        .players-lol {
+            border-bottom: 2px solid variables.$mainWhite;
+
+            .players-lol-titulo,
+            .players-lol-subtitulo {
+                color: variables.$subWhite;
+                font-family: variables.$fontArchivo;
+                font-size: 1.4em;
+                text-align: center;
+                text-decoration: underline;
+
+                @include tablet {
+                    font-size: variables.$sizeTitulo;
+                }
+
+                @include desktop {
+                    font-size: 4em;
+                }
+            }
+
+            ul {
+                padding: 0 1em;
+                margin-bottom: 30px;
+                list-style-type: none;
+                color: variables.$subWhite;
+                font-family: variables.$fontOswald;
+                font-size: 1.2em;
+
+                li {
+                    @include tablet {
+                        font-size: 2.5em;
+                        text-align: center;
+                    }
+
+                    @include desktop {
+                        font-size: 3.5em;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .equipos-valo {
+        @include flex-column-gap;
+
+        img {
+            padding-top: 20px;
+            width: 40vw;
+
+            @include desktop {
+                width: 25vw;
+            }
+        }
+
+        h2 {
+            color: variables.$subWhite;
+            font-family: variables.$fontKanit;
+            font-size: 2.5em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid variables.$mainWhite;
+            text-align: center;
+
+            @include tablet {
+                font-size: 4em;
+            }
+
+            @include desktop {
+                font-size: 6em;
+            }
+        }
+    }
+
+    .equipos-csgo {
+        @include flex-column-gap;
+
+        img {
+            width: 70vw;
+
+            @include tablet {
+                width: 65vw;
+            }
+
+            @include desktop {
+                width: 55vw;
+            }
+        }
+
+        h2 {
+            color: variables.$subWhite;
+            font-family: variables.$fontKanit;
+            font-size: 2.5em;
+            text-align: center;
+
+            @include tablet {
+                font-size: 4em;
+            }
+
+            @include desktop {
+                font-size: 6em;
+            }
+        }
+    }
+}

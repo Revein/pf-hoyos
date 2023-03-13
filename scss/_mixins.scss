@@ -1,0 +1,21 @@
+// MEDIA QUERIES
+
+@mixin tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+// MIXINS VARIOS
+
+@mixin flex-column-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

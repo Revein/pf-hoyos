@@ -1,0 +1,113 @@
+@use 'variables';
+@use 'mixins' as *;
+
+.noticias {
+    background-image: url("../img/webimg/336786.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 40px;
+    position: relative;
+
+    h1 {
+        color: variables.$mainWhite;
+        padding-top: 20px;
+        font-family: variables.$fontAlfa;
+        font-size: variables.$sizeTitulo;
+        text-shadow: variables.$sombraTitulo;
+        text-align: center;
+
+        @include desktop {
+            font-size: 6em;
+        }
+    }
+
+    h2 {
+        color: variables.$subWhite;
+        font-family: variables.$fontKanit;
+        font-size: variables.$sizeSubtitulo;
+        letter-spacing: .5px;
+        padding: 5px;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    #titulo-articulo {
+        color: variables.$mainWhite;
+        font-family: variables.$fontBebas;
+        font-size: variables.$sizeSubtitulo;
+        padding-top: 20px;
+
+        @include tablet {
+            font-size: 2.75em;
+        }
+
+        @include desktop {
+            font-size: 3.5em;
+        }
+    }
+
+    #cont-noticias {
+        background: linear-gradient(to right, #757F9A, #D7DDE8);
+    }
+
+    #subtitulo-articulo {
+        color: variables.$mainBlack;
+        font-family: variables.$fontArchivo;
+        font-size: 1.6em;
+
+        @include tablet {
+            font-size: 2.25em;
+        }
+
+        @include desktop {
+            font-size: 3.1em;
+        }
+    }
+
+    #texto-articulo {
+        color: variables.$mainBlack;
+        font-family: variables.$fontOswald;
+        font-size: 1.1em;
+
+        @include tablet {
+            font-size: variables.$sizeSubtitulo;
+        }
+
+        @include desktop {
+            font-size: 1.6em;
+        }
+    }
+
+    #boton-noticias {
+        background-color: variables.$mainRed;
+        font-family: variables.$fontKanit;
+        border: none;
+        color: variables.$mainWhite;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+
+        @include tablet {
+            font-size: 25px;
+        }
+
+        @include desktop {
+            font-size: 30px;
+            height: 15%;
+            transition: .5s, color .10s;
+            -webkit-transition: .5s, color .10s;
+            -moz-transition: .5s, color .10s;
+
+            &:hover {
+                box-shadow: 0 8px 8px 0 variables.$mainGray, 0 8px 8px 0 variables.$mainBlack;
+                transform: translate(0px,5px);
+                -webkit-transform: translate(0px,5px);
+                -moz-transform: translate(0px,5px);
+            }
+        }
+    }
+}

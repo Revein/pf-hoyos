@@ -1,0 +1,63 @@
+@use 'variables';
+@use 'mixins' as *;
+
+.navbar {
+    background-image: url("../img/webimg/tlt5k87p8uw51.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    .navbar-toggler {
+        border-color: variables.$subWhite;
+        background-image: url("../img/webimg/structure-378782_1280.jpg");
+        background-position: top;
+        background-size: cover;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+        padding: 0 1em;
+
+        img {
+            width: 90px;
+
+            @include tablet {
+                width: 110px;
+            }
+
+            @include desktop {
+                width: 150px;
+            }
+        }
+    }
+
+    .navbar-nav {
+        align-items: center;
+
+        .nav-link {
+            font-family: variables.$fontBebas;
+            font-size: variables.$sizeSubtitulo;
+            color: variables.$mainWhite;
+            padding: .5em 1em;
+
+            @include tablet {
+                font-size: 2.5em;
+            }
+
+            @include desktop {
+                font-size: variables.$sizeTitulo;
+
+                &.active,
+                &:hover {
+                    color: variables.$mainRed;
+                    text-shadow: 0 0 10px variables.$subWhite,
+                                 0 0 20px variables.$subWhite,
+                                 0 0 40px variables.$subWhite,
+                                 0 0 60px variables.$subWhite,
+                                 0 0 80px variables.$subWhite,
+                                 0 0 90px variables.$subWhite;
+                }
+            }
+        }
+    }
+}

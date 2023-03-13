@@ -1,0 +1,147 @@
+@use 'variables';
+@use 'mixins' as *;
+
+.footer {
+    background-color: variables.$mainBlack;
+
+    .inner-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        grid-gap: 20px;
+
+        @include desktop {
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            grid-template-areas: 
+                "formulario sponsors"
+                "redes      redes";
+        }
+
+        .footer-form {
+            width: 90%;
+
+            @include desktop {
+                max-width: 35vw;
+                grid-area: formulario;
+            }
+
+            h4 {
+                color: variables.$mainWhite;
+                font-family: variables.$fontBebas;
+                font-size: 1.75em;
+                padding: 10px;
+
+                @include tablet {
+                    font-size: 2.25em;
+                }
+
+                @include desktop {
+                    font-size: variables.$sizeSubtitulo;
+                }
+            }
+
+            #email {
+                font-family: variables.$fontTeko;
+                font-size: 20px;
+                letter-spacing: .5px;
+                text-indent: 4%;
+
+                @include tablet {
+                    font-size: 25px;
+                }
+
+                @include desktop {
+                    font-size: 30px;
+                }
+            }
+
+            #submit {
+                font-family: variables.$fontArchivo;
+                letter-spacing: .5px;
+            }
+        }
+
+        .patrocinadores {
+            width: 90%;
+            padding: 10px;
+            font-family: variables.$fontTeko;
+            color: variables.$mainWhite;
+
+            @include desktop {
+                max-width: 35vw;
+                grid-area: sponsors;
+            }
+
+            h2 {
+                @include tablet {
+                    font-size: 2.25em;
+                }
+
+                @include desktop {
+                    font-size: 2.5em;
+                }
+            }
+
+            .patros-logos {
+                list-style-type: none;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding-left: 0;
+
+                li {
+
+                    img {
+                        width: 65px;
+
+                        @include tablet {
+                            width: 80px;
+                        }
+
+                        @include desktop {
+                            width: 90px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .redes-sociales {
+            font-family: variables.$fontRubik;
+            color: variables.$mainWhite;
+            font-size: 14px;
+
+            @include desktop {
+                grid-area: redes;
+            }
+
+            .redes-logos {
+                display: block;
+                letter-spacing: 15px;
+
+                a {
+                    text-decoration: none;
+
+                    img {
+                        width: 40px;
+
+                        @include tablet {
+                            width: 50px;
+                        }
+
+                        @include desktop {
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
