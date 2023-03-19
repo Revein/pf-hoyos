@@ -17,7 +17,7 @@
         text-align: center;
 
         @include desktop {
-            font-size: 6em;
+            font-size: 4em;
         }
     }
 
@@ -29,84 +29,183 @@
         padding: 5px;
         text-align: center;
         text-decoration: underline;
-    }
-
-    #titulo-articulo {
-        color: variables.$mainWhite;
-        font-family: variables.$fontBebas;
-        font-size: variables.$sizeSubtitulo;
-        padding-top: 20px;
-
-        @include tablet {
-            font-size: 2.75em;
-        }
 
         @include desktop {
-            font-size: 3.5em;
+            font-size: 3em;
         }
     }
 
-    #cont-noticias {
-        background: linear-gradient(to right, #757F9A, #D7DDE8);
-    }
-
-    #subtitulo-articulo {
-        color: variables.$mainBlack;
-        font-family: variables.$fontArchivo;
-        font-size: 1.6em;
-
-        @include tablet {
-            font-size: 2.25em;
-        }
+    .container-noticias {
+        display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    width: 100%;
 
         @include desktop {
-            font-size: 3.1em;
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 100px 600px;
+            justify-items: center;
+            align-items: center;
+            grid-template-areas: 
+                "titulonews titulonews"
+                "articulo1  articulo2";
         }
-    }
 
-    #texto-articulo {
-        color: variables.$mainBlack;
-        font-family: variables.$fontOswald;
-        font-size: 1.1em;
-
-        @include tablet {
+        h3 {
+            color: variables.$mainWhite;
+            font-family: variables.$fontBebas;
             font-size: variables.$sizeSubtitulo;
+            text-decoration: underline;
+            padding-top: 20px;
+
+            @include desktop {
+                grid-area: titulonews;
+                font-size: 3em;
+            }
         }
 
-        @include desktop {
-            font-size: 1.6em;
-        }
-    }
-
-    #boton-noticias {
-        background-color: variables.$mainRed;
-        font-family: variables.$fontKanit;
-        border: none;
-        color: variables.$mainWhite;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin: 4px 2px;
-        cursor: pointer;
-
-        @include tablet {
-            font-size: 25px;
-        }
-
-        @include desktop {
-            font-size: 30px;
-            height: 15%;
-            transition: .5s, color .10s;
-            -webkit-transition: .5s, color .10s;
-            -moz-transition: .5s, color .10s;
+        article {
+            width: 300px;
+	        margin: 10px;
 
             &:hover {
-                box-shadow: 0 8px 8px 0 variables.$mainGray, 0 8px 8px 0 variables.$mainBlack;
-                transform: translate(0px,5px);
-                -webkit-transform: translate(0px,5px);
-                -moz-transform: translate(0px,5px);
+                figcaption {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                img {
+                    transform: translateY(-10px);
+                }
+
+                figure {
+                    &::after {
+                        top: 0;
+                    }
+                }
+
+                p {
+                    margin: 20px 0;
+                }
+            }
+
+            @include desktop {
+                .articulo1 {
+                    grid-area: articulo1;
+                }
+
+                .articulo2 {
+                    grid-area: articulo2;
+                }
+            }
+
+            figure {
+                position: relative;
+                max-height: 400px;
+                overflow: hidden;
+                border-radius: 8px;
+                margin-bottom: 50px;
+
+                @include desktop {
+                    max-height: 500px;
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 60%, rgba(255, 255 ,255 , 0) 100%);
+                    transition: .3s;
+
+                    @include desktop {
+                        top: calc(100% - 140px);
+                    }
+                }
+
+                img {
+                    transition: .5s ease-in-out;
+                }
+
+                figcaption {
+                    position: absolute;
+		            top: 50%;
+		            z-index: 1;
+		            padding: 0 20px;
+		            color: variables.$mainWhite;
+		            transform: translateY(-50%);
+		            text-align: center;
+		            transition: .3s;
+
+                    @include desktop {
+                        top: calc(100% - 110px);
+                        transform: unset;
+                    }
+
+                    h4 {
+                        display: -webkit-box;
+                        max-height: 85px;
+                        overflow: hidden;
+                        color: variables.$mainRed;
+                        font-family: variables.$fontBree;
+                        font-size: 1.5em;
+                        line-height: 28px;
+                        text-shadow: 0px 1px 5px variables.$mainBlack;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+
+                        @include desktop {
+                            font-family: variables.$fontArchivo;
+                            font-size: 1.25em;
+                        }
+                    }
+
+                    p {
+                        display: -webkit-box;
+                        max-height: 150px;
+                        margin: 20px 0;
+                        color: variables.$subWhite;
+                        font-family: variables.$fontOswald;
+                        font-size: 1em;
+                        line-height: 30px;
+                        transition: .5s ease-in-out;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+        
+                        @include desktop {
+                            margin: 60px;
+                            max-height: 300px;
+                            font-size: 1.25em;
+                        }
+                    }
+
+                    a {
+                        background-color: variables.$mainRed;
+                        font-family: variables.$fontKanit;
+                        border-radius: 8px;
+                        color: variables.$subWhite;
+                        padding: 10px 20px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 20px;
+                        margin: 4px 2px;
+                        cursor: pointer;
+                        transition: .3s;
+
+                        @include desktop {
+                            &:hover {
+                                color: variables.$mainRed;
+                                background-color: variables.$subWhite;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

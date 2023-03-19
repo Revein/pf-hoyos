@@ -16,12 +16,8 @@
         text-shadow: variables.$sombraTitulo;
         text-align: center;
 
-        @include tablet {
-            font-size: 4em;
-        }
-
         @include desktop {
-            font-size: 6em;
+            font-size: 4em;
         }
     }
 
@@ -32,7 +28,7 @@
             width: 50vw;
 
             @include desktop {
-                width: 40vw;
+                width: 30vw;
             }
         }
 
@@ -40,7 +36,7 @@
             width: 80vw;
 
             @include desktop {
-                width: 60vw;
+                width: 50vw;
             }
         }
 
@@ -55,12 +51,8 @@
                 text-align: center;
                 text-decoration: underline;
 
-                @include tablet {
-                    font-size: variables.$sizeTitulo;
-                }
-
                 @include desktop {
-                    font-size: 4em;
+                    font-size: variables.$sizeTitulo;
                 }
             }
 
@@ -74,12 +66,12 @@
 
                 li {
                     @include tablet {
-                        font-size: 2.5em;
+                        font-size: variables.$sizeSubtitulo;
                         text-align: center;
                     }
 
                     @include desktop {
-                        font-size: 3.5em;
+                        font-size: variables.$sizeSubtitulo;
                         text-align: center;
                     }
                 }
@@ -95,7 +87,7 @@
             width: 40vw;
 
             @include desktop {
-                width: 25vw;
+                width: 20vw;
             }
         }
 
@@ -107,12 +99,8 @@
             border-bottom: 2px solid variables.$mainWhite;
             text-align: center;
 
-            @include tablet {
-                font-size: 4em;
-            }
-
             @include desktop {
-                font-size: 6em;
+                font-size: 4em;
             }
         }
     }
@@ -128,7 +116,7 @@
             }
 
             @include desktop {
-                width: 55vw;
+                width: 40vw;
             }
         }
 
@@ -138,12 +126,8 @@
             font-size: 2.5em;
             text-align: center;
 
-            @include tablet {
-                font-size: 4em;
-            }
-
             @include desktop {
-                font-size: 6em;
+                font-size: 4em;
             }
         }
     }

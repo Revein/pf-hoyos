@@ -17,12 +17,8 @@
         text-shadow: variables.$sombraTitulo;
         text-align: center;
 
-        @include tablet {
-            font-size: 4em;
-        }
-
         @include desktop {
-            font-size: 6em;
+            font-size: 4em;
         }
     }
 
@@ -32,16 +28,15 @@
         text-align: center;
         font-size: 2.2em;
 
-        @include tablet {
-            font-size: 3.5em;
-        }
-
         @include desktop {
-            font-size: 5em;
+            font-size: 3.5em;
         }
     }
 
     .partidos-contenedor {
+        @include desktop {
+            width: 70%;
+        }
 
         h4 {
             color: variables.$subWhite;
@@ -129,6 +124,7 @@
 
         ul {
             padding: 0 1em;
+            overflow: hidden;
 
             li {
                 font-size: 1.8em;
@@ -215,9 +211,9 @@
                     -moz-transition: .5s, color .10s;
 
                     &:hover {
-                        transform: scale3d(1.5, 1.5, 0.3);
-                        -webkit-transform: scale3d(1.5, 1.5, 0.3);
-                        -moz-transform: scale3d(1.5, 1.5, 0.3);
+                        transform: scale3d(1.2, 1.2, 0.3);
+                        -webkit-transform: scale3d(1.2, 1.2, 0.3);
+                        -moz-transform: scale3d(1.2, 1.2, 0.3);
                     }
                 }
             }

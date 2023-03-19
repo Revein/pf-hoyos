@@ -35,15 +35,11 @@
             h4 {
                 color: variables.$mainWhite;
                 font-family: variables.$fontBebas;
-                font-size: 1.75em;
+                font-size: 1.5em;
                 padding: 10px;
 
-                @include tablet {
-                    font-size: 2.25em;
-                }
-
                 @include desktop {
-                    font-size: variables.$sizeSubtitulo;
+                    font-size: 1.75em;
                 }
             }
 
@@ -53,12 +49,8 @@
                 letter-spacing: .5px;
                 text-indent: 4%;
 
-                @include tablet {
-                    font-size: 25px;
-                }
-
                 @include desktop {
-                    font-size: 30px;
+                    font-size: 25px;
                 }
             }
 

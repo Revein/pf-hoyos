@@ -248,7 +248,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .noticias h1 {
-    font-size: 6em;
+    font-size: 4em;
   }
 }
 .noticias h2 {
@@ -260,86 +260,168 @@ body {
   text-align: center;
   text-decoration: underline;
 }
-.noticias #titulo-articulo {
+@media screen and (min-width: 1200px) {
+  .noticias h2 {
+    font-size: 3em;
+  }
+}
+.noticias .container-noticias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .noticias .container-noticias {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 600px;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "titulonews titulonews" "articulo1  articulo2";
+  }
+}
+.noticias .container-noticias h3 {
   color: #EEEEEE;
   font-family: "Bebas Neue", cursive;
   font-size: 2em;
+  text-decoration: underline;
   padding-top: 20px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .noticias #titulo-articulo {
-    font-size: 2.75em;
+@media screen and (min-width: 1200px) {
+  .noticias .container-noticias h3 {
+    grid-area: titulonews;
+    font-size: 3em;
   }
+}
+.noticias .container-noticias article {
+  width: 300px;
+  margin: 10px;
+}
+.noticias .container-noticias article:hover figcaption {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.noticias .container-noticias article:hover img {
+  transform: translateY(-10px);
+}
+.noticias .container-noticias article:hover figure::after {
+  top: 0;
+}
+.noticias .container-noticias article:hover p {
+  margin: 20px 0;
 }
 @media screen and (min-width: 1200px) {
-  .noticias #titulo-articulo {
-    font-size: 3.5em;
+  .noticias .container-noticias article .articulo1 {
+    grid-area: articulo1;
+  }
+  .noticias .container-noticias article .articulo2 {
+    grid-area: articulo2;
   }
 }
-.noticias #cont-noticias {
-  background: linear-gradient(to right, #757F9A, #D7DDE8);
-}
-.noticias #subtitulo-articulo {
-  color: #02010E;
-  font-family: "Archivo Black", sans-serif;
-  font-size: 1.6em;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .noticias #subtitulo-articulo {
-    font-size: 2.25em;
-  }
+.noticias .container-noticias article figure {
+  position: relative;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 50px;
 }
 @media screen and (min-width: 1200px) {
-  .noticias #subtitulo-articulo {
-    font-size: 3.1em;
+  .noticias .container-noticias article figure {
+    max-height: 500px;
   }
 }
-.noticias #texto-articulo {
-  color: #02010E;
+.noticias .container-noticias article figure::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 60%, rgba(255, 255, 255, 0) 100%);
+  transition: 0.3s;
+}
+@media screen and (min-width: 1200px) {
+  .noticias .container-noticias article figure::after {
+    top: calc(100% - 140px);
+  }
+}
+.noticias .container-noticias article figure img {
+  transition: 0.5s ease-in-out;
+}
+.noticias .container-noticias article figure figcaption {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  padding: 0 20px;
+  color: #EEEEEE;
+  transform: translateY(-50%);
+  text-align: center;
+  transition: 0.3s;
+}
+@media screen and (min-width: 1200px) {
+  .noticias .container-noticias article figure figcaption {
+    top: calc(100% - 110px);
+    transform: unset;
+  }
+}
+.noticias .container-noticias article figure figcaption h4 {
+  display: -webkit-box;
+  max-height: 85px;
+  overflow: hidden;
+  color: #D72323;
+  font-family: "Bree Serif", serif;
+  font-size: 1.5em;
+  line-height: 28px;
+  text-shadow: 0px 1px 5px #02010E;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+@media screen and (min-width: 1200px) {
+  .noticias .container-noticias article figure figcaption h4 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.25em;
+  }
+}
+.noticias .container-noticias article figure figcaption p {
+  display: -webkit-box;
+  max-height: 150px;
+  margin: 20px 0;
+  color: #EAEAEA;
   font-family: "Oswald", sans-serif;
-  font-size: 1.1em;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .noticias #texto-articulo {
-    font-size: 2em;
-  }
+  font-size: 1em;
+  line-height: 30px;
+  transition: 0.5s ease-in-out;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 @media screen and (min-width: 1200px) {
-  .noticias #texto-articulo {
-    font-size: 1.6em;
+  .noticias .container-noticias article figure figcaption p {
+    margin: 60px;
+    max-height: 300px;
+    font-size: 1.25em;
   }
 }
-.noticias #boton-noticias {
+.noticias .container-noticias article figure figcaption a {
   background-color: #D72323;
   font-family: "Kanit", sans-serif;
-  border: none;
-  color: #EEEEEE;
-  padding: 15px 32px;
+  border-radius: 8px;
+  color: #EAEAEA;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .noticias #boton-noticias {
-    font-size: 25px;
-  }
+  transition: 0.3s;
 }
 @media screen and (min-width: 1200px) {
-  .noticias #boton-noticias {
-    font-size: 30px;
-    height: 15%;
-    transition: 0.5s, color 0.1s;
-    -webkit-transition: 0.5s, color 0.1s;
-    -moz-transition: 0.5s, color 0.1s;
-  }
-  .noticias #boton-noticias:hover {
-    box-shadow: 0 8px 8px 0 #303841, 0 8px 8px 0 #02010E;
-    transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
-    -moz-transform: translate(0px, 5px);
+  .noticias .container-noticias article figure figcaption a:hover {
+    color: #D72323;
+    background-color: #EAEAEA;
   }
 }
 
@@ -358,14 +440,9 @@ body {
   text-shadow: 5px 5px 5px #303841;
   text-align: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .equipos h1 {
-    font-size: 4em;
-  }
-}
 @media screen and (min-width: 1200px) {
   .equipos h1 {
-    font-size: 6em;
+    font-size: 4em;
   }
 }
 .equipos .equipos-lol {
@@ -378,7 +455,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .equipos .equipos-lol .logo-lol {
-    width: 40vw;
+    width: 30vw;
   }
 }
 .equipos .equipos-lol .roster-lol {
@@ -386,7 +463,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .equipos .equipos-lol .roster-lol {
-    width: 60vw;
+    width: 50vw;
   }
 }
 .equipos .equipos-lol .players-lol {
@@ -400,16 +477,10 @@ body {
   text-align: center;
   text-decoration: underline;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .equipos .equipos-lol .players-lol .players-lol-titulo,
-  .equipos .equipos-lol .players-lol .players-lol-subtitulo {
-    font-size: 3em;
-  }
-}
 @media screen and (min-width: 1200px) {
   .equipos .equipos-lol .players-lol .players-lol-titulo,
   .equipos .equipos-lol .players-lol .players-lol-subtitulo {
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 .equipos .equipos-lol .players-lol ul {
@@ -422,13 +493,13 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .equipos .equipos-lol .players-lol ul li {
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
   }
 }
 @media screen and (min-width: 1200px) {
   .equipos .equipos-lol .players-lol ul li {
-    font-size: 3.5em;
+    font-size: 2em;
     text-align: center;
   }
 }
@@ -443,7 +514,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .equipos .equipos-valo img {
-    width: 25vw;
+    width: 20vw;
   }
 }
 .equipos .equipos-valo h2 {
@@ -454,14 +525,9 @@ body {
   border-bottom: 2px solid #EEEEEE;
   text-align: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .equipos .equipos-valo h2 {
-    font-size: 4em;
-  }
-}
 @media screen and (min-width: 1200px) {
   .equipos .equipos-valo h2 {
-    font-size: 6em;
+    font-size: 4em;
   }
 }
 .equipos .equipos-csgo {
@@ -479,7 +545,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .equipos .equipos-csgo img {
-    width: 55vw;
+    width: 40vw;
   }
 }
 .equipos .equipos-csgo h2 {
@@ -488,14 +554,9 @@ body {
   font-size: 2.5em;
   text-align: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .equipos .equipos-csgo h2 {
-    font-size: 4em;
-  }
-}
 @media screen and (min-width: 1200px) {
   .equipos .equipos-csgo h2 {
-    font-size: 6em;
+    font-size: 4em;
   }
 }
 
@@ -515,14 +576,9 @@ body {
   text-shadow: 5px 5px 5px #303841;
   text-align: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .partidos h1 {
-    font-size: 4em;
-  }
-}
 @media screen and (min-width: 1200px) {
   .partidos h1 {
-    font-size: 6em;
+    font-size: 4em;
   }
 }
 .partidos .partidos-titulo-comp {
@@ -531,14 +587,14 @@ body {
   text-align: center;
   font-size: 2.2em;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .partidos .partidos-titulo-comp {
     font-size: 3.5em;
   }
 }
 @media screen and (min-width: 1200px) {
-  .partidos .partidos-titulo-comp {
-    font-size: 5em;
+  .partidos .partidos-contenedor {
+    width: 70%;
   }
 }
 .partidos .partidos-contenedor h4 {
@@ -626,6 +682,7 @@ body {
 }
 .partidos .partidos-sintoniza ul {
   padding: 0 1em;
+  overflow: hidden;
 }
 .partidos .partidos-sintoniza ul li {
   font-size: 1.8em;
@@ -702,9 +759,9 @@ body {
     -moz-transition: 0.5s, color 0.1s;
   }
   .partidos .partidos-lmf a img:hover {
-    transform: scale3d(1.5, 1.5, 0.3);
-    -webkit-transform: scale3d(1.5, 1.5, 0.3);
-    -moz-transform: scale3d(1.5, 1.5, 0.3);
+    transform: scale3d(1.2, 1.2, 0.3);
+    -webkit-transform: scale3d(1.2, 1.2, 0.3);
+    -moz-transform: scale3d(1.2, 1.2, 0.3);
   }
 }
 
@@ -983,17 +1040,12 @@ body {
 .footer .inner-footer .footer-form h4 {
   color: #EEEEEE;
   font-family: "Bebas Neue", cursive;
-  font-size: 1.75em;
+  font-size: 1.5em;
   padding: 10px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer .inner-footer .footer-form h4 {
-    font-size: 2.25em;
-  }
 }
 @media screen and (min-width: 1200px) {
   .footer .inner-footer .footer-form h4 {
-    font-size: 2em;
+    font-size: 1.75em;
   }
 }
 .footer .inner-footer .footer-form #email {
@@ -1002,14 +1054,9 @@ body {
   letter-spacing: 0.5px;
   text-indent: 4%;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer .inner-footer .footer-form #email {
-    font-size: 25px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .footer .inner-footer .footer-form #email {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .footer .inner-footer .footer-form #submit {
