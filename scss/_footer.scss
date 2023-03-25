@@ -35,7 +35,7 @@
             h4 {
                 color: variables.$mainWhite;
                 font-family: variables.$fontBebas;
-                font-size: 1.5em;
+                font-size: 1.3em;
                 padding: 10px;
 
                 @include desktop {
@@ -45,7 +45,7 @@
 
             #email {
                 font-family: variables.$fontTeko;
-                font-size: 20px;
+                font-size: 15px;
                 letter-spacing: .5px;
                 text-indent: 4%;
 
@@ -56,6 +56,8 @@
 
             #submit {
                 font-family: variables.$fontArchivo;
+                font-size: .7em;
+                width: 35%;
                 letter-spacing: .5px;
             }
         }
@@ -91,7 +93,7 @@
                 li {
 
                     img {
-                        width: 65px;
+                        width: 50px;
 
                         @include tablet {
                             width: 80px;
@@ -108,7 +110,8 @@
         .redes-sociales {
             font-family: variables.$fontRubik;
             color: variables.$mainWhite;
-            font-size: 14px;
+            font-size: 10px;
+            margin-bottom: 5px;
 
             @include desktop {
                 grid-area: redes;
@@ -122,7 +125,7 @@
                     text-decoration: none;
 
                     img {
-                        width: 40px;
+                        width: 30px;
 
                         @include tablet {
                             width: 50px;

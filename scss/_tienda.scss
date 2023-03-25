@@ -2,154 +2,392 @@
 @use 'mixins' as *;
 
 .tienda {
-    padding: 30px 0 54px;
+    background-image: url("../img/webimg/336786.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-inline: 10px;
+    position: relative;
 
-    .tienda-titulos {
+    img {
+        @include desktop {
+            width: 70%;
+        }
+    }
+
+    .tienda-productos {
+        padding: 30px 0 54px;
+
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
         h2 {
             font-family: variables.$fontTeko;
             font-style: italic;
-            font-size: 2.3em;
-            color: variables.$mainRed;
-            text-shadow: 1.5px 1.5px 1.5px variables.$mainBlack;
-
-            @include tablet {
-                font-size: 4em;
-            }
-
+            font-size: variables.$sizeTitulo;
+            color: variables.$mainWhite;
+            text-align: center;
+            text-shadow: variables.$sombraTitulo;
+    
             @include desktop {
-                font-size: 5em;
+                font-size: 4.5em;
+            }
+        }
+        
+        // TIENDA MOBILE
+        .producto-mobile {    
+            border-radius: 20px;
+            margin-top: 20px;
+            padding: 5px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            background-image: linear-gradient(144deg,variables.$mainRed, variables.$mainBlue 50%,variables.$mainCyan);
+    
+            img {
+                width: 80%;
+            }
+    
+            .contenido-producto-mobile {
+                padding: 20px;
+                background: variables.$mainBlack;
+                border-radius: 17px;
+                
+                .precio-producto-mobile {
+                    text-align: center;
+                    color: variables.$mainWhite;
+                    font-family: variables.$fontBree;
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                }
+    
+                h3 {
+                    color: variables.$mainRed;
+                    font-family: variables.$fontBebas;
+                    font-size: 1.3em;
+                    text-align: center;
+                }
+    
+                p {
+                    color: variables.$mainWhite;
+                    font-family: variables.$fontOswald;
+                    font-size: 1em;
+                    text-align: justify;
+                    line-height: 1.4;
+                    margin-bottom: 10px;
+                }
+
+                .acordeon-desc-mobile {
+                    h3 {
+                        button {
+                            background: variables.$mainBlue;
+                            color: variables.$subWhite;
+                            font-family: variables.$fontBree;
+                            font-size: .6em;
+                        }
+                    }
+
+                    .accordion-body {
+                        background-color: variables.$subWhite;
+
+                        .texto-desc-mobile {
+                            padding-left: 15px;
+                            font-family: variables.$fontOswald;
+                            font-size: 1em;
+
+                            li {
+                                list-style-type: disc;
+                            }
+                        }
+                    }
+                }
+    
+                label {
+                    color: variables.$subWhite;
+                    display: block;
+                    font-family: variables.$fontKanit;
+                    font-size: 1em;
+                    margin-bottom: 5px;
+                }
+    
+                select,
+                input[type="number"] {
+                    background-color: variables.$mainWhite;
+                    font-family: variables.$fontBree;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 1em;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    width: 100%;
+                }
+    
+                .boton-compra-mobile {
+                    background-color: variables.$mainRed;
+                    position: relative;
+                    left: 18%;
+                    border: none;
+                    border-radius: 5px;
+                    color: variables.$mainWhite;
+                    font-family: variables.$fontKanit;
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 10px 20px;
+                    margin-top: 20px;
+                    transition: all 0.3s ease-in-out;
+                    width: 65%;
+                }
             }
         }
 
-        h3 {
-            font-family: variables.$fontOswald;
-            font-size: variables.$sizeSubtitulo;
-            color: variables.$mainBlack;
-
-            @include tablet {
-                font-size: 3.5em;
-            }
-
-            @include desktop {
-                font-size: 4em;
-            }
-        }
-    }
-
-    .contenedor-jersey23,
-    .contenedor-jersey22 {
-        padding-bottom: 20px;
-        margin-bottom: 26px;
-    }
-
-    .item-tienda {
-
-        .item-tienda-parte1 {
-            position: relative;
-            height: 290px;
-            max-height: 290px;
+        // TIENDA DESKTOP
+        .producto-desktop {
+            background: linear-gradient(144deg,variables.$mainRed, 50%,variables.$mainGray);
+            border: 1px solid variables.$mainWhite;
+            border-radius: 5px;
+            width: 35%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 30px;
             margin-bottom: 20px;
-            overflow: hidden;
+            padding: 10px;
+            position: relative;
+            text-align: center;
+
+            &:hover {
+                transform: scale(1.05);
+                z-index: 1;
+            }
 
             &::before {
+                content: "";
                 position: absolute;
-	            content: "";
-	            top: 0;
-	            left: 0;
-	            width: 100%;
-	            height: 100%;
-	            z-index: -1;
-	            transition: all 0.3s;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                background: linear-gradient(144deg, variables.$mainWhite, 50%,variables.$mainBlack);
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
             }
 
-            ul {
-                position: absolute;
-                bottom: -41px;
-                left: 20px;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                opacity: 0;
-                transition: bottom 0.5s, opacity 0.5s;
+            &:hover::before {
+                opacity: 0.8;
+            }
 
-                li {
-                    display: inline-block;
-                    margin-right: 4px;
+            img {
+                width: 50%;
+                transition: .5s, color .10s;
 
-                    a {
-                        display: inline-block;
-                        width: 40px;
-                        height: 40px;
-                        line-height: 40px;
-                        background-color: transparent;
-                        color: variables.$mainGray;
-                        text-align: center;
-                        box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
-                        transition: color 0.2s;
+                &:hover {
+                    transform: scale3d(1.1, 1.1, 0.3);
+                }
+            }
 
-                        &:hover {
-                            color: variables.$mainRed;
-                        }
+            .info-producto-desktop {
+                flex-grow: 1;
+
+                h3 {
+                    color: variables.$mainBlack;
+                    font-family: variables.$fontTeko;
+                    font-size: 2.5em;
+                    margin: 0;
+                }
+
+                .descripcion-producto-desktop {
+                    color: variables.$mainBlack;
+                    font-family: variables.$fontKanit;
+                    font-size: 1.5em;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+
+                .precio-producto-desktop {
+                    text-align: center;
+                    color: variables.$subWhite;
+                    font-family: variables.$fontKanit;
+                    font-size: variables.$sizeSubtitulo;
+                    margin-bottom: 10px;
+                }
+
+                .boton-tienda-compra {
+                    background-color: variables.$mainRed;
+                    border: none;
+                    border-radius: 5px;
+                    color: variables.$subWhite;
+                    cursor: pointer;
+                    font-family: variables.$fontKanit;
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 10px 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    transition: .5s, color .10s;
+                    width: 40%;
+
+                    &:hover {
+                        box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+                        transform: translate(0px,5px);
+                    }
+                }
+
+                .boton-tienda-detalle {
+                    background-color: variables.$mainBlue;
+                    border: none;
+                    border-radius: 5px;
+                    color: variables.$subWhite;
+                    cursor: pointer;
+                    font-family: variables.$fontKanit;
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 10px 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    transition: .5s, color .10s;
+                    width: 50%;
+
+                    &:hover {
+                        box-shadow: 0 8px 8px 0 variables.$mainBlack,0 8px 8px 0 variables.$mainBlack;
+                        transform: translate(0px,5px);
                     }
                 }
             }
         }
 
-        .item-tienda-parte2 {
+        // MODAL DESKTOP
+        .modal {
+            .modal-dialog {
+                .modal-content {
+                    .modal-header {
+                        background-color: variables.$mainGray;
 
-            h3 {
-                text-align: center;
-                color: variables.$mainRed;
-                font-family: variables.$fontBebas;
-                font-size: variables.$sizeSubtitulo;
+                        h4 {
+                            color: variables.$subWhite;
+                            font-family: variables.$fontBree;
+                        }
+                    }
 
-                @include tablet {
-                    font-size: variables.$sizeTitulo;
-                }
-            }
+                    .modal-body {
+                        background-color: variables.$mainBlack;
 
-            h4 {
-                text-align: center;
-                font-family: variables.$fontBree;
-                font-size: variables.$sizeSubtitulo;
+                        h5 {
+                            color: variables.$mainRed;
+                            font-family: variables.$fontKanit;
+                            font-size: 1.75em;
+                        }
 
-                @include tablet {
-                    font-size: variables.$sizeSubtitulo;
+                        .btn-group {
+                            label {
+                                border: 2px solid variables.$mainRed;
+                                color: variables.$mainWhite;
+                                font-family: variables.$fontBree;
+                                font-size: 1.25em;
+                            }
+                        }
+
+                        input {
+                            background-color: variables.$mainWhite;
+                            font-family: variables.$fontArchivo;
+                            border: 2px solid variables.$mainRed;
+                            border-radius: 5px;
+                            font-size: 1em;
+                            margin-bottom: 10px;
+                            padding: 10px;
+                            width: 20%;
+                        }
+
+                        .texto-modal {
+                            color: variables.$subWhite;
+                            font-family: variables.$fontOswald;
+                            font-size: 1.1em;
+                            line-height: 2em;
+
+                            li {
+                                list-style-type: disc;
+                            }
+                        }
+                    }
+
+                    .modal-footer {
+                        background-color: variables.$mainGray;
+
+                        .boton-modal-cerrar {
+                            background-color: variables.$mainRed;
+                            border: 2px solid variables.$mainBlack;
+                            border-radius: 5px;
+                            color: variables.$mainWhite;
+                            cursor: pointer;
+                            font-family: variables.$fontKanit;
+                            font-size: 20px;
+                            width: 25%;
+                            transition: .5s, color .10s;
+
+                            &:hover {
+                                box-shadow: 0 8px 8px 0 variables.$mainBlack,0 8px 8px 0 variables.$mainBlack;
+                                transform: translateX(-10px);
+                            }
+                        }
+
+                        .boton-modal-addcart {
+                            background-color: variables.$mainBlue;
+                            border: 2px solid variables.$mainBlack;
+                            border-radius: 5px;
+                            color: variables.$mainWhite;
+                            cursor: pointer;
+                            font-family: variables.$fontKanit;
+                            font-size: 20px;
+                            width: 55%;
+                            transition: .5s, color .10s;
+
+                            &:hover {
+                                box-shadow: 0 8px 8px 0 variables.$mainBlack,0 8px 8px 0 variables.$mainBlack;
+                                transform: translateX(10px);
+                            }
+                        }
+                    }
                 }
             }
         }
+    }
 
-        &:hover {
-
-            .item-tienda-parte1::before {
-                transform: scale(1.2,1.2) rotate(5deg);
+    // ACORDEON MOBILE
+    .faq-mobile {
+        .acordeon-faq-mobile {
+            h5 {
+                color: variables.$mainWhite;
+                font-family: variables.$fontTeko;
+                font-size: variables.$sizeSubtitulo;
+                text-align: center;
             }
 
-            .item-tienda-parte1 {
-
-                ul {
-                    bottom: 30px;
-                    opacity: 1;
-                }
-            }
-        }
-
-        @include desktop {
-            .tienda-card {
-
-                h5 {
-                    color: variables.$mainGray;
-                    font-family: variables.$fontTeko;
-                    font-size: variables.$sizeSubtitulo;
+            .acordeon-item-mobile {
+                h6 {
+                    button {
+                        background: variables.$mainRed;
+                        color: variables.$subWhite;
+                        font-family: variables.$fontBree;
+                        font-size: 1.1em;
+                    }
                 }
 
-                .card-text {
+                .accordion-body {
+                    background-color: variables.$mainGray;
 
-                    ul {
-                        color: variables.$mainGray;
+                    .texto-faq-mobile {
+                        padding-top: 5px;
+                        padding-left: 15px;
+                        color: variables.$subWhite;
                         font-family: variables.$fontOswald;
-                        font-size: 1.25em;
+                        font-size: 1.1em;
+                        text-align: justify;
+                        line-height: 2em;
 
                         li {
                             list-style-type: disc;
@@ -157,142 +395,6 @@
                     }
                 }
             }
-        }
-    }
-
-    #item-tienda-producto1 {
-
-        .item-tienda-parte1::before {
-            background: url("../img/shop/Jersey23.png") no-repeat center;
-            background-size: contain;
-	        transition: all 0.3s;
-        }
-    }
-
-    #item-tienda-producto2 {
-
-        .item-tienda-parte1::before {
-            background: url("../img/shop/Jersey22.png") no-repeat center;
-            background-size: contain;
-        }
-    }
-
-    #item-tienda-producto3 {
-
-        .item-tienda-parte1::before {
-            background: url("../img/shop/Hoodie.png") no-repeat center;
-            background-size: contain;
-        }
-    }
-
-    #item-tienda-producto1,
-    #item-tienda-producto2,
-    #item-tienda-producto3 {
-        border-bottom: 1px solid variables.$mainGray;
-        padding-bottom: 20px;
-        margin-bottom: 26px;
-    }
-
-    #boton-acordeon {
-        background-color: variables.$mainGray;
-        color: variables.$subWhite;
-        font-family: variables.$fontTeko;
-        font-size: 1.2em;
-    }
-
-    .texto-acordeon {
-        font-family: variables.$fontOswald;
-        font-size: 1.5em;
-
-        ul {
-
-            li {
-
-                ul {
-                    list-style-type: disc;
-                }
-            }
-        }
-    }
-
-    .texto-talle {
-        background-color: variables.$mainGray;
-        color: variables.$subWhite;
-        font-family: variables.$fontTeko;
-        font-size: 1.8em;
-    }
-
-    .texto-drop {
-        background-color: variables.$mainWhite;
-        color: variables.$mainGray;
-        font-family: variables.$fontTeko;
-        font-size: 1.8em;
-    }
-
-    .boton-compra {
-        background-color: variables.$mainRed;
-        font-family: variables.$fontKanit;
-        border: none;
-        color: variables.$subWhite;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin: 4px 2px;
-        cursor: pointer;
-
-        @include desktop {
-            font-size: 30px;
-            transition: .5s, color .10s;
-            -webkit-transition: .5s, color .10s;
-            -moz-transition: .5s, color .10s;
-
-            &:hover {
-                box-shadow: 0 8px 8px 0 variables.$mainGray,0 8px 8px 0 variables.$mainBlack;
-                transform: translate(0px,5px);
-                -webkit-transform: translate(0px,5px);
-                -moz-transform:translate(0px,5px);
-            }
-        }
-    }
-}
-
-.tienda-faq {
-    position: relative;
-
-    h4 {
-        color: variables.$mainGray;
-        font-family: variables.$fontBebas;
-        font-size: 1.8em;
-        text-decoration: underline;
-
-        @include tablet {
-            font-size: 2.5em;
-        }
-
-        @include desktop {
-            font-size: 3em;
-        }
-    }
-
-    .tienda-subtitulos {
-        color: variables.$mainGray;
-        font-family: variables.$fontOswald;
-        font-size: 1em;
-
-        @include tablet {
-            padding: 0 2em;
-            font-size: 1.75em;
-        }
-
-        @include desktop {
-            padding: 0 2em;
-            font-size: variables.$sizeSubtitulo;
-        }
-
-        li {
-            list-style-type: disc;
         }
     }
 }

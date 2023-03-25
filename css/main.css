@@ -766,243 +766,330 @@ body {
 }
 
 .tienda {
+  background-image: url("../img/webimg/336786.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+  padding-inline: 10px;
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .tienda img {
+    width: 70%;
+  }
+}
+.tienda .tienda-productos {
   padding: 30px 0 54px;
 }
-.tienda .tienda-titulos h2 {
+@media screen and (min-width: 1200px) {
+  .tienda .tienda-productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.tienda .tienda-productos h2 {
   font-family: "Teko", sans-serif;
   font-style: italic;
-  font-size: 2.3em;
+  font-size: 3em;
+  color: #EEEEEE;
+  text-align: center;
+  text-shadow: 5px 5px 5px #303841;
+}
+@media screen and (min-width: 1200px) {
+  .tienda .tienda-productos h2 {
+    font-size: 4.5em;
+  }
+}
+.tienda .tienda-productos .producto-mobile {
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 5px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg, #D72323, #2323D7 50%, #23D7D7);
+}
+.tienda .tienda-productos .producto-mobile img {
+  width: 80%;
+}
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile {
+  padding: 20px;
+  background: #02010E;
+  border-radius: 17px;
+}
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile .precio-producto-mobile {
+  text-align: center;
+  color: #EEEEEE;
+  font-family: "Bree Serif", serif;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile h3 {
   color: #D72323;
-  text-shadow: 1.5px 1.5px 1.5px #02010E;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.3em;
+  text-align: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .tienda .tienda-titulos h2 {
-    font-size: 4em;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .tienda .tienda-titulos h2 {
-    font-size: 5em;
-  }
-}
-.tienda .tienda-titulos h3 {
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile p {
+  color: #EEEEEE;
   font-family: "Oswald", sans-serif;
-  font-size: 2em;
-  color: #02010E;
+  font-size: 1em;
+  text-align: justify;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .tienda .tienda-titulos h3 {
-    font-size: 3.5em;
-  }
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile .acordeon-desc-mobile h3 button {
+  background: #2323D7;
+  color: #EAEAEA;
+  font-family: "Bree Serif", serif;
+  font-size: 0.6em;
 }
-@media screen and (min-width: 1200px) {
-  .tienda .tienda-titulos h3 {
-    font-size: 4em;
-  }
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile .acordeon-desc-mobile .accordion-body {
+  background-color: #EAEAEA;
 }
-.tienda .contenedor-jersey23,
-.tienda .contenedor-jersey22 {
-  padding-bottom: 20px;
-  margin-bottom: 26px;
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile .acordeon-desc-mobile .accordion-body .texto-desc-mobile {
+  padding-left: 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
 }
-.tienda .item-tienda .item-tienda-parte1 {
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile .acordeon-desc-mobile .accordion-body .texto-desc-mobile li {
+  list-style-type: disc;
+}
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile label {
+  color: #EAEAEA;
+  display: block;
+  font-family: "Kanit", sans-serif;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile select,
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile input[type=number] {
+  background-color: #EEEEEE;
+  font-family: "Bree Serif", serif;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.tienda .tienda-productos .producto-mobile .contenido-producto-mobile .boton-compra-mobile {
+  background-color: #D72323;
   position: relative;
-  height: 290px;
-  max-height: 290px;
-  margin-bottom: 20px;
-  overflow: hidden;
+  left: 18%;
+  border: none;
+  border-radius: 5px;
+  color: #EEEEEE;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  width: 65%;
 }
-.tienda .item-tienda .item-tienda-parte1::before {
-  position: absolute;
+.tienda .tienda-productos .producto-desktop {
+  background: linear-gradient(144deg, #D72323, 50%, #303841);
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  width: 35%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
+.tienda .tienda-productos .producto-desktop:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+.tienda .tienda-productos .producto-desktop::before {
   content: "";
+  position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  transition: all 0.3s;
-}
-.tienda .item-tienda .item-tienda-parte1 ul {
-  position: absolute;
-  bottom: -41px;
-  left: 20px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  border-radius: 5px;
+  background: linear-gradient(144deg, #EEEEEE, 50%, #02010E);
   opacity: 0;
-  transition: bottom 0.5s, opacity 0.5s;
+  transition: opacity 0.3s ease-in-out;
 }
-.tienda .item-tienda .item-tienda-parte1 ul li {
-  display: inline-block;
-  margin-right: 4px;
+.tienda .tienda-productos .producto-desktop:hover::before {
+  opacity: 0.8;
 }
-.tienda .item-tienda .item-tienda-parte1 ul li a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  background-color: transparent;
-  color: #303841;
-  text-align: center;
-  box-shadow: 0 2px 20px rgba(50, 50, 50, 0.1);
-  transition: color 0.2s;
+.tienda .tienda-productos .producto-desktop img {
+  width: 50%;
+  transition: 0.5s, color 0.1s;
 }
-.tienda .item-tienda .item-tienda-parte1 ul li a:hover {
-  color: #D72323;
+.tienda .tienda-productos .producto-desktop img:hover {
+  transform: scale3d(1.1, 1.1, 0.3);
 }
-.tienda .item-tienda .item-tienda-parte2 h3 {
-  text-align: center;
-  color: #D72323;
-  font-family: "Bebas Neue", cursive;
-  font-size: 2em;
+.tienda .tienda-productos .producto-desktop .info-producto-desktop {
+  flex-grow: 1;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .tienda .item-tienda .item-tienda-parte2 h3 {
-    font-size: 3em;
-  }
-}
-.tienda .item-tienda .item-tienda-parte2 h4 {
-  text-align: center;
-  font-family: "Bree Serif", serif;
-  font-size: 2em;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .tienda .item-tienda .item-tienda-parte2 h4 {
-    font-size: 2em;
-  }
-}
-.tienda .item-tienda:hover .item-tienda-parte1::before {
-  transform: scale(1.2, 1.2) rotate(5deg);
-}
-.tienda .item-tienda:hover .item-tienda-parte1 ul {
-  bottom: 30px;
-  opacity: 1;
-}
-@media screen and (min-width: 1200px) {
-  .tienda .item-tienda .tienda-card h5 {
-    color: #303841;
-    font-family: "Teko", sans-serif;
-    font-size: 2em;
-  }
-  .tienda .item-tienda .tienda-card .card-text ul {
-    color: #303841;
-    font-family: "Oswald", sans-serif;
-    font-size: 1.25em;
-  }
-  .tienda .item-tienda .tienda-card .card-text ul li {
-    list-style-type: disc;
-  }
-}
-.tienda #item-tienda-producto1 .item-tienda-parte1::before {
-  background: url("../img/shop/Jersey23.png") no-repeat center;
-  background-size: contain;
-  transition: all 0.3s;
-}
-.tienda #item-tienda-producto2 .item-tienda-parte1::before {
-  background: url("../img/shop/Jersey22.png") no-repeat center;
-  background-size: contain;
-}
-.tienda #item-tienda-producto3 .item-tienda-parte1::before {
-  background: url("../img/shop/Hoodie.png") no-repeat center;
-  background-size: contain;
-}
-.tienda #item-tienda-producto1,
-.tienda #item-tienda-producto2,
-.tienda #item-tienda-producto3 {
-  border-bottom: 1px solid #303841;
-  padding-bottom: 20px;
-  margin-bottom: 26px;
-}
-.tienda #boton-acordeon {
-  background-color: #303841;
-  color: #EAEAEA;
+.tienda .tienda-productos .producto-desktop .info-producto-desktop h3 {
+  color: #02010E;
   font-family: "Teko", sans-serif;
-  font-size: 1.2em;
+  font-size: 2.5em;
+  margin: 0;
 }
-.tienda .texto-acordeon {
-  font-family: "Oswald", sans-serif;
+.tienda .tienda-productos .producto-desktop .info-producto-desktop .descripcion-producto-desktop {
+  color: #02010E;
+  font-family: "Kanit", sans-serif;
   font-size: 1.5em;
+  text-align: center;
+  margin: 10px 0;
 }
-.tienda .texto-acordeon ul li ul {
+.tienda .tienda-productos .producto-desktop .info-producto-desktop .precio-producto-desktop {
+  text-align: center;
+  color: #EAEAEA;
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.tienda .tienda-productos .producto-desktop .info-producto-desktop .boton-tienda-compra {
+  background-color: #D72323;
+  border: none;
+  border-radius: 5px;
+  color: #EAEAEA;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  transition: 0.5s, color 0.1s;
+  width: 40%;
+}
+.tienda .tienda-productos .producto-desktop .info-producto-desktop .boton-tienda-compra:hover {
+  box-shadow: 0 8px 8px 0 #000000, 0 8px 8px 0 #000000;
+  transform: translate(0px, 5px);
+}
+.tienda .tienda-productos .producto-desktop .info-producto-desktop .boton-tienda-detalle {
+  background-color: #2323D7;
+  border: none;
+  border-radius: 5px;
+  color: #EAEAEA;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: 0.5s, color 0.1s;
+  width: 50%;
+}
+.tienda .tienda-productos .producto-desktop .info-producto-desktop .boton-tienda-detalle:hover {
+  box-shadow: 0 8px 8px 0 #02010E, 0 8px 8px 0 #02010E;
+  transform: translate(0px, 5px);
+}
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-header {
+  background-color: #303841;
+}
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-header h4 {
+  color: #EAEAEA;
+  font-family: "Bree Serif", serif;
+}
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-body {
+  background-color: #02010E;
+}
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-body h5 {
+  color: #D72323;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.75em;
+}
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-body .btn-group label {
+  border: 2px solid #D72323;
+  color: #EEEEEE;
+  font-family: "Bree Serif", serif;
+  font-size: 1.25em;
+}
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-body input {
+  background-color: #EEEEEE;
+  font-family: "Archivo Black", sans-serif;
+  border: 2px solid #D72323;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 20%;
+}
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-body .texto-modal {
+  color: #EAEAEA;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-body .texto-modal li {
   list-style-type: disc;
 }
-.tienda .texto-talle {
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-footer {
   background-color: #303841;
-  color: #EAEAEA;
-  font-family: "Teko", sans-serif;
-  font-size: 1.8em;
 }
-.tienda .texto-drop {
-  background-color: #EEEEEE;
-  color: #303841;
-  font-family: "Teko", sans-serif;
-  font-size: 1.8em;
-}
-.tienda .boton-compra {
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-footer .boton-modal-cerrar {
   background-color: #D72323;
-  font-family: "Kanit", sans-serif;
-  border: none;
-  color: #EAEAEA;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
+  border: 2px solid #02010E;
+  border-radius: 5px;
+  color: #EEEEEE;
   cursor: pointer;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  width: 25%;
+  transition: 0.5s, color 0.1s;
 }
-@media screen and (min-width: 1200px) {
-  .tienda .boton-compra {
-    font-size: 30px;
-    transition: 0.5s, color 0.1s;
-    -webkit-transition: 0.5s, color 0.1s;
-    -moz-transition: 0.5s, color 0.1s;
-  }
-  .tienda .boton-compra:hover {
-    box-shadow: 0 8px 8px 0 #303841, 0 8px 8px 0 #02010E;
-    transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
-    -moz-transform: translate(0px, 5px);
-  }
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-footer .boton-modal-cerrar:hover {
+  box-shadow: 0 8px 8px 0 #02010E, 0 8px 8px 0 #02010E;
+  transform: translateX(-10px);
 }
-
-.tienda-faq {
-  position: relative;
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-footer .boton-modal-addcart {
+  background-color: #2323D7;
+  border: 2px solid #02010E;
+  border-radius: 5px;
+  color: #EEEEEE;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  width: 55%;
+  transition: 0.5s, color 0.1s;
 }
-.tienda-faq h4 {
-  color: #303841;
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.8em;
-  text-decoration: underline;
+.tienda .tienda-productos .modal .modal-dialog .modal-content .modal-footer .boton-modal-addcart:hover {
+  box-shadow: 0 8px 8px 0 #02010E, 0 8px 8px 0 #02010E;
+  transform: translateX(10px);
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .tienda-faq h4 {
-    font-size: 2.5em;
-  }
+.tienda .faq-mobile .acordeon-faq-mobile h5 {
+  color: #EEEEEE;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+  text-align: center;
 }
-@media screen and (min-width: 1200px) {
-  .tienda-faq h4 {
-    font-size: 3em;
-  }
+.tienda .faq-mobile .acordeon-faq-mobile .acordeon-item-mobile h6 button {
+  background: #D72323;
+  color: #EAEAEA;
+  font-family: "Bree Serif", serif;
+  font-size: 1.1em;
 }
-.tienda-faq .tienda-subtitulos {
-  color: #303841;
+.tienda .faq-mobile .acordeon-faq-mobile .acordeon-item-mobile .accordion-body {
+  background-color: #303841;
+}
+.tienda .faq-mobile .acordeon-faq-mobile .acordeon-item-mobile .accordion-body .texto-faq-mobile {
+  padding-top: 5px;
+  padding-left: 15px;
+  color: #EAEAEA;
   font-family: "Oswald", sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
+  text-align: justify;
+  line-height: 2em;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .tienda-faq .tienda-subtitulos {
-    padding: 0 2em;
-    font-size: 1.75em;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .tienda-faq .tienda-subtitulos {
-    padding: 0 2em;
-    font-size: 2em;
-  }
-}
-.tienda-faq .tienda-subtitulos li {
+.tienda .faq-mobile .acordeon-faq-mobile .acordeon-item-mobile .accordion-body .texto-faq-mobile li {
   list-style-type: disc;
 }
 
@@ -1040,7 +1127,7 @@ body {
 .footer .inner-footer .footer-form h4 {
   color: #EEEEEE;
   font-family: "Bebas Neue", cursive;
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding: 10px;
 }
 @media screen and (min-width: 1200px) {
@@ -1050,7 +1137,7 @@ body {
 }
 .footer .inner-footer .footer-form #email {
   font-family: "Teko", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 0.5px;
   text-indent: 4%;
 }
@@ -1061,6 +1148,8 @@ body {
 }
 .footer .inner-footer .footer-form #submit {
   font-family: "Archivo Black", sans-serif;
+  font-size: 0.7em;
+  width: 35%;
   letter-spacing: 0.5px;
 }
 .footer .inner-footer .patrocinadores {
@@ -1093,7 +1182,7 @@ body {
   padding-left: 0;
 }
 .footer .inner-footer .patrocinadores .patros-logos li img {
-  width: 65px;
+  width: 50px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer .inner-footer .patrocinadores .patros-logos li img {
@@ -1108,7 +1197,8 @@ body {
 .footer .inner-footer .redes-sociales {
   font-family: "Rubik", sans-serif;
   color: #EEEEEE;
-  font-size: 14px;
+  font-size: 10px;
+  margin-bottom: 5px;
 }
 @media screen and (min-width: 1200px) {
   .footer .inner-footer .redes-sociales {
@@ -1123,7 +1213,7 @@ body {
   text-decoration: none;
 }
 .footer .inner-footer .redes-sociales .redes-logos a img {
-  width: 40px;
+  width: 30px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer .inner-footer .redes-sociales .redes-logos a img {

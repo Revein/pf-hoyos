@@ -9,7 +9,7 @@
     <meta name="keywords" content="Spartan Gaming, Esports, League of Legends, Shop, Jersey, Hoodie, Camiseta, Buzo">
     <link rel="icon" href="../img/teamsicons/SG ICON.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/f4704f0792.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css">
 </head>
     
@@ -49,38 +49,26 @@
     </header>
 
     <!-- CUERPO PAGINA -->
-    <main>
+    <main class="tienda">
         <section>
-            <img src="../img/webimg/jersey oficial.jpg" class="mx-auto d-block img-fluid" alt="Jersey Spartan Gaming 2023">
+            <img src="../img/webimg/jersey oficial.jpg" class="mx-auto d-block img-fluid rounded-3" alt="Jersey Spartan Gaming 2023">
         </section>
-        <section class="tienda">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-xl-8">
-                        <div class="tienda-titulos">
-                            <h2>SPARTAN GAMING OFFICIAL SHOP</h2>
-                            <h3>Productos Populares</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 contenedor-jersey23">
-                        <div id="item-tienda-producto1" class="item-tienda">
-                            <div class="item-tienda-parte1">
-                                <ul>
-                                    <li><a href="#"><i class="bi bi-suit-heart-fill display-3"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="item-tienda-parte2">
-                                <h3>SPARTAN GAMING - PRO JERSEY 22/23</h3>
-                                <h4>ARS$ 7.000,00</h4>
-                            </div>
-                        </div>
-                        <div class="card mb-3 d-none d-xl-block">
-                            <div class="card-body tienda-card">
-                                <h5 class="card-title">DESCRIPCION DEL PRODUCTO</h5>
-                                <p class="card-text">
-                                    <ul>
+        <section class="tienda-productos">
+            <h2>SPARTAN GAMING OFFICIAL SHOP</h2>
+
+            <!-- PRODUCTO 1 - JERSEY 2023 -->
+            <article class="producto-mobile d-xl-none mb-5">
+                <img src="../img/shop/Jersey23v2.png" class="mx-auto d-block" alt="Jersey Spartan Gaming 2023">
+                <div class="contenido-producto-mobile">
+                    <div class="precio-producto-mobile">ARS$ 7.000,00</div>
+                    <h3>SPARTAN GAMING - PRO JERSEY 22/23</h3>
+                    <p>Lleva la pasión por nuestro equipo a donde quiera que vayas con la Camiseta Oficial Spartan Gaming 2023.</p>
+                    <div class="accordion acordeon-desc-mobile mb-2" id="descripcionMobile">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa-solid fa-circle-info fa-sm me-1"></i> DETALLES DEL PRODUCTO</button></h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#descripcionMobile">
+                                <div class="accordion-body">
+                                    <ul class="texto-desc-mobile">
                                         <li>Camiseta Oficial Spartan Gaming - Temporada 2022-2023</li>
                                         <li>Tela 100% poliester Dry-Fit</li>
                                         <li>Detalles en tela microperforada</li>
@@ -95,79 +83,149 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="accordion mb-3 d-xl-none" id="descripcion-item">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" id="boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        DESCRIPCION DEL PRODUCTO
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#descripcion-item">
-                                    <div class="accordion-body texto-acordeon">
-                                        <ul>
-                                            <li>Camiseta Oficial Spartan Gaming - Temporada 2022-2023</li>
-                                            <li>Tela 100% poliester Dry-Fit</li>
-                                            <li>Detalles en tela microperforada</li>
-                                            <li>Diseño 100% sublimado</li>
-                                            <li>Cuello en V</li>
-                                            <li>Instrucciones de Lavado:
-                                                <ul>
-                                                    <li>Lavar del réves</li>
-                                                    <li>No planchar</li>
-                                                    <li>Lavar a 30°</li>
-                                                    <li>Centrifugado suave</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text texto-talle" for="talle-item">TALLE</label>
-                            <select class="form-select texto-drop" id="talle-item">
-                                <option selected>ELEGIR...</option>
-                                <option value="1">S</option>
-                                <option value="2">M</option>
-                                <option value="3">L</option>
-                                <option value="4">XL</option>
-                                <option value="5">XXL</option>
-                                <option value="6">XXXL</option>
-                            </select>
-                        </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text texto-talle" for="cantidad-item">CANTIDAD</label>
-                            <select class="form-select texto-drop" id="cantidad-item">
-                                <option selected>ELEGIR...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                        <button type="button" class="btn btn-danger mx-auto d-block boton-compra">COMPRAR</button>
                     </div>
-                    <div class="col-xl-4 contenedor-jersey22">
-                        <div id="item-tienda-producto2" class="item-tienda">
-                            <div class="item-tienda-parte1">
-                                <ul>
-                                    <li><a href="#"><i class="bi bi-suit-heart-fill display-3"></i></a></li>
+                    <label for="talle-producto-mobile">Talle:</label>
+                    <select id="talle-producto-mobile">
+                        <option value="small">S</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                        <option value="extralarge">XL</option>
+                        <option value="extraextralarge">XXL</option>
+                        <option value="extraextraextralarge">XXXL</option>
+                    </select>
+                    <label for="cantidad-producto-mobile">Cantidad:</label>
+                    <input type="number" id="cantidad-producto-mobile" value="1" min="1">
+                    <button class="boton-compra-mobile">COMPRAR <i class="fa-solid fa-cart-plus fa-xs"></i></button>
+                </div>
+            </article>
+            <article class="producto-desktop d-none d-xl-block mb-5">
+                <img src="../img/shop/Jersey23v2.png" alt="Jersey Spartan Gaming 2023">
+                <div class="info-producto-desktop">
+                    <div class="precio-producto-desktop">ARS$ 7.000,00</div>
+                    <h3>SPARTAN GAMING - PRO JERSEY 22/23</h3>
+                    <p class="descripcion-producto-desktop">Lleva la pasión por nuestro equipo a donde quiera que vayas con la Camiseta Oficial Spartan Gaming 2023.</p>
+                    <button type="button" class="boton-tienda-detalle" data-bs-toggle="modal" data-bs-target="#modaljersey23"><i class="fa-solid fa-maximize"></i> DETALLES DEL PRODUCTO </button>
+                    <button type="button" class="boton-tienda-compra" data-bs-toggle="modal" data-bs-target="#modalbuyjersey23"> COMPRAR <i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </article>
+            <div class="modal fade" id="modalbuyjersey23" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalbuyjersey23Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title fs-5" id="modalbuyjersey23Label">SPARTAN GAMING - PRO JERSEY 22/23</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="mb-5">
+                                <h5><i class="fa-solid fa-circle-check fa-xs"></i> TALLE:</h5>
+                                <div class="btn-group" role="group" aria-label="botonestalles">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-danger" for="btnradio1">S</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio2">M</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio3">L</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio4">XL</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio5">XXL</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio6">XXXL</label>
+                                </div>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-circle-check fa-xs"></i> CANTIDAD:</h5>
+                                <input type="number" id="cantidad-producto-desktop" value="1" min="1">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="boton-modal-cerrar" data-bs-dismiss="modal">CERRAR</button>
+                            <button type="button" class="boton-modal-addcart"> AGREGAR AL CARRITO <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modaljersey23" tabindex="-1" aria-labelledby="modaljersey23label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title fs-5" id="modaljersey23label">SPARTAN GAMING - PRO JERSEY 22/23</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <h5><i class="fa-solid fa-circle-info fa-xs"></i> DESCRIPCION DEL PRODUCTO</h5>
+                                <ul class="texto-modal">
+                                    <li>Camiseta Oficial Spartan Gaming - Temporada 2022-2023</li>
+                                    <li>Tela 100% poliester Dry-Fit</li>
+                                    <li>Detalles en tela microperforada</li>
+                                    <li>Diseño 100% sublimado</li>
+                                    <li>Cuello en V</li>
+                                    <li>Instrucciones de Lavado:
+                                        <ul>
+                                            <li>Lavar del réves</li>
+                                            <li>No planchar</li>
+                                            <li>Lavar a 30°</li>
+                                            <li>Centrifugado suave</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="item-tienda-parte2">
-                                <h3>SPARTAN GAMING - PRO JERSEY 21/22</h3>
-                                <h4>ARS$ 6.500,00</h4>
+                            <div>
+                                <h5><i class="fa-solid fa-money-bill-wave fa-xs"></i> METODOS DE PAGO</h5>
+                                <ul class="texto-modal">
+                                    <li>Tarjetas de Crédito: <i class="fa-brands fa-cc-visa fa-xl"></i> / <i class="fa-brands fa-cc-mastercard fa-xl"></i> / <i class="fa-brands fa-cc-amex fa-xl"></i></li>
+                                    <li><i class="fa-sharp fa-solid fa-building-columns fa-lg"></i> Transferencia Bancaria</li>
+                                    <li><i class="fa-sharp fa-solid fa-coins fa-xl"></i></i> Efectivo</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5><i class="fa-sharp fa-solid fa-truck-fast fa-xs"></i> ENVIOS</h5>
+                                <ul class="texto-modal">
+                                    <li>Envíos a cualquier parte de Argentina a través de Andreani</li>
+                                    <li>Tiempo estimado de llegada del envío:
+                                        <ul>
+                                            <li><span class="text-decoration-underline">AMBA</span>: 3-5 días hábiles</li>
+                                            <li><span class="text-decoration-underline">Interior del País</span>: 7-10 días hábiles</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-envelope fa-xs"></i> POLÍTICA DE CAMBIOS</h5>
+                                <ul class="texto-modal">
+                                    <li>Ante la necesidad de solicitar un cambio por algún desperfecto de fábrica en la prenda o debido al talle de la misma, contactarse con <a class="text-danger" href="mailto: soporte@spartangaming.com">consultas@spartangaming.com</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="card mb-3 d-none d-xl-block">
-                            <div class="card-body tienda-card">
-                                <h5 class="card-title">DESCRIPCION DEL PRODUCTO</h5>
-                                <p class="card-text">
-                                    <ul>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary boton-modal-cerrar" data-bs-dismiss="modal">CERRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 2 - JERSEY 2022 -->
+            <article class="producto-mobile d-xl-none mb-5">
+                <img src="../img/shop/Jersey22v2.png" class="mx-auto d-block" alt="Jersey Spartan Gaming 2022">
+                <div class="contenido-producto-mobile">
+                    <div class="precio-producto-mobile">ARS$ 6.500,00</div>
+                    <h3>SPARTAN GAMING - PRO JERSEY 21/22</h3>
+                    <p>Vuelve a la tienda nuestra camiseta del año 2022 que tantas alegrías nos dio.</p>
+                    <div class="accordion acordeon-desc-mobile mb-2" id="descripcionMobile">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fa-solid fa-circle-info fa-sm me-1"></i> DETALLES DEL PRODUCTO</button></h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#descripcionMobile">
+                                <div class="accordion-body">
+                                    <ul class="texto-desc-mobile">
                                         <li>Camiseta Oficial Spartan Gaming - Temporada 2021-2022</li>
                                         <li>Tela 100% poliester Dry-Fit</li>
                                         <li>Diseño 100% sublimado</li>
@@ -181,78 +239,148 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="accordion mb-3 d-xl-none" id="descripcion-item">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" id="boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        DESCRIPCION DEL PRODUCTO
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#descripcion-item">
-                                    <div class="accordion-body texto-acordeon">
-                                        <ul>
-                                            <li>Camiseta Oficial Spartan Gaming - Temporada 2021-2022</li>
-                                            <li>Tela 100% poliester Dry-Fit</li>
-                                            <li>Diseño 100% sublimado</li>
-                                            <li>Cuello en V</li>  
-                                            <li>Instrucciones de Lavado:
-                                                <ul>
-                                                    <li>Lavar del réves</li>
-                                                    <li>No planchar</li>
-                                                    <li>Lavar a 30°</li>
-                                                    <li>Centrifugado suave</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text texto-talle" for="talle-item">TALLE</label>
-                            <select class="form-select texto-drop" id="talle-item">
-                                <option selected>ELEGIR...</option>
-                                <option value="1">S</option>
-                                <option value="2">M</option>
-                                <option value="3">L</option>
-                                <option value="4">XL</option>
-                                <option value="5">XXL</option>
-                                <option value="6">XXXL</option>
-                            </select>
-                        </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text texto-talle" for="cantidad-item">CANTIDAD</label>
-                            <select class="form-select texto-drop" id="cantidad-item">
-                                <option selected>ELEGIR...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                        <button type="button" class="btn btn-danger mx-auto d-block boton-compra">COMPRAR</button>
                     </div>
-                    <div class="col-xl-4 contenedor-hoodie">
-                        <div id="item-tienda-producto3" class="item-tienda">
-                            <div class="item-tienda-parte1">
-                                <ul>
-                                    <li><a href="#"><i class="bi bi-suit-heart-fill display-3"></i></a></li>
+                    <label for="talle-producto-mobile">Talle:</label>
+                    <select id="talle-producto-mobile">
+                        <option value="small">S</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                        <option value="extralarge">XL</option>
+                        <option value="extraextralarge">XXL</option>
+                        <option value="extraextraextralarge">XXXL</option>
+                    </select>
+                    <label for="cantidad-producto-mobile">Cantidad:</label>
+                    <input type="number" id="cantidad-producto-mobile" value="1" min="1">
+                    <button class="boton-compra-mobile">COMPRAR <i class="fa-solid fa-cart-plus fa-xs"></i></button>
+                </div>
+            </article>
+            <article class="producto-desktop d-none d-xl-block mb-5">
+                <img src="../img/shop/Jersey22v2.png" alt="Jersey Spartan Gaming 2022">
+                <div class="info-producto-desktop">
+                    <div class="precio-producto-desktop">ARS$ 6.500,00</div>
+                    <h3>SPARTAN GAMING - PRO JERSEY 21/22</h3>
+                    <p class="descripcion-producto-desktop">Vuelve a la tienda nuestra camiseta del año 2022 que tantas alegrías nos dio.</p>
+                    <button type="button" class="boton-tienda-detalle" data-bs-toggle="modal" data-bs-target="#modaljersey22"><i class="fa-solid fa-maximize"></i> DETALLES DEL PRODUCTO </button>
+                    <button type="button" class="boton-tienda-compra" data-bs-toggle="modal" data-bs-target="#modalbuyjersey22"> COMPRAR <i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </article>
+            <div class="modal fade" id="modalbuyjersey22" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalbuyjersey22Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title fs-5" id="modalbuyjersey23Label">SPARTAN GAMING - PRO JERSEY 21/22</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="mb-5">
+                                <h5><i class="fa-solid fa-circle-check fa-xs"></i> TALLE:</h5>
+                                <div class="btn-group" role="group" aria-label="botonestalles">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-danger" for="btnradio1">S</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio2">M</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio3">L</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio4">XL</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio5">XXL</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio6">XXXL</label>
+                                </div>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-circle-check fa-xs"></i> CANTIDAD:</h5>
+                                <input type="number" id="cantidad-producto-desktop" value="1" min="1">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="boton-modal-cerrar" data-bs-dismiss="modal">CERRAR</button>
+                            <button type="button" class="boton-modal-addcart"> AGREGAR AL CARRITO <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modaljersey22" tabindex="-1" aria-labelledby="modaljersey22label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title fs-5" id="modaljersey22label">SPARTAN GAMING - PRO JERSEY 21/22</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <h5><i class="fa-solid fa-circle-info fa-xs"></i> DESCRIPCION DEL PRODUCTO</h5>
+                                <ul class="texto-modal">
+                                    <li>Camiseta Oficial Spartan Gaming - Temporada 2021-2022</li>
+                                    <li>Tela 100% poliester Dry-Fit</li>
+                                    <li>Diseño 100% sublimado</li>
+                                    <li>Cuello en V</li>  
+                                    <li>Instrucciones de Lavado:
+                                        <ul>
+                                            <li>Lavar del réves</li>
+                                            <li>No planchar</li>
+                                            <li>Lavar a 30°</li>
+                                            <li>Centrifugado suave</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="item-tienda-parte2">
-                                <h3>SPARTAN GAMING - HOODIE 2023</h3>
-                                <h4>ARS$ 6.500,00</h4>
+                            <div>
+                                <h5><i class="fa-solid fa-money-bill-wave fa-xs"></i> METODOS DE PAGO</h5>
+                                <ul class="texto-modal">
+                                    <li>Tarjetas de Crédito: <i class="fa-brands fa-cc-visa fa-xl"></i> / <i class="fa-brands fa-cc-mastercard fa-xl"></i> / <i class="fa-brands fa-cc-amex fa-xl"></i></li>
+                                    <li><i class="fa-sharp fa-solid fa-building-columns fa-lg"></i> Transferencia Bancaria</li>
+                                    <li><i class="fa-sharp fa-solid fa-coins fa-xl"></i></i> Efectivo</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5><i class="fa-sharp fa-solid fa-truck-fast fa-xs"></i> ENVIOS</h5>
+                                <ul class="texto-modal">
+                                    <li>Envíos a cualquier parte de Argentina a través de Andreani</li>
+                                    <li>Tiempo estimado de llegada del envío:
+                                        <ul>
+                                            <li><span class="text-decoration-underline">AMBA</span>: 3-5 días hábiles</li>
+                                            <li><span class="text-decoration-underline">Interior del País</span>: 7-10 días hábiles</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-envelope fa-xs"></i> POLÍTICA DE CAMBIOS</h5>
+                                <ul class="texto-modal">
+                                    <li>Ante la necesidad de solicitar un cambio por algún desperfecto de fábrica en la prenda o debido al talle de la misma, contactarse con <a class="text-danger" href="mailto: soporte@spartangaming.com">consultas@spartangaming.com</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="card mb-3 d-none d-xl-block">
-                            <div class="card-body tienda-card">
-                                <h5 class="card-title">DESCRIPCION DEL PRODUCTO</h5>
-                                <p class="card-text">
-                                    <ul>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary boton-modal-cerrar" data-bs-dismiss="modal">CERRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 3 - HOODIE 2023 -->
+            <article class="producto-mobile d-xl-none mb-3">
+                <img src="../img/shop/Hoodiev2.png" class="mx-auto d-block" alt="Hoodie Spartan Gaming 2023">
+                <div class="contenido-producto-mobile">
+                    <div class="precio-producto-mobile">ARS$ 7.000,00</div>
+                    <h3>SPARTAN GAMING - HOODIE 2023</h3>
+                    <p>Ahora también lleva la pilcha del equipo en épocas invernales con el nuevo hoodie de Spartan Gaming.</p>
+                    <div class="accordion acordeon-desc-mobile mb-2" id="descripcionMobile">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa-solid fa-circle-info fa-sm me-1"></i> DETALLES DEL PRODUCTO</button></h3>
+                            <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#descripcionMobile">
+                                <div class="accordion-body">
+                                    <ul class="texto-desc-mobile">
                                         <li>Buzo canguro con capucha</li>   
                                         <li>Tela 100% algodón</li>
                                         <li>Estilo unisex de corte recto</li> 
@@ -264,113 +392,187 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="accordion mb-3 d-xl-none" id="descripcion-item">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" id="boton-acordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        DESCRIPCION DEL PRODUCTO
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#descripcion-item">
-                                    <div class="accordion-body texto-acordeon">
-                                        <ul>
-                                            <li>Buzo canguro con capucha</li>   
-                                            <li>Tela 100% algodón</li>
-                                            <li>Estilo unisex de corte recto</li> 
-                                            <li>Instrucciones de Lavado:
-                                                <ul>
-                                                    <li>Lavar del réves</li>
-                                                    <li>Lavar con agua fría</li>    
-                                                    <li>Usar detergente suave</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text texto-talle" for="talle-item">TALLE</label>
-                            <select class="form-select texto-drop" id="talle-item">
-                                <option selected>ELEGIR...</option>
-                                <option value="1">S</option>
-                                <option value="2">M</option>
-                                <option value="3">L</option>
-                                <option value="4">XL</option>
-                                <option value="5">XXL</option>
-                                <option value="6">XXXL</option>
-                            </select>
+                    </div>
+                    <label for="talle-producto-mobile">Talle:</label>
+                    <select id="talle-producto-mobile">
+                        <option value="small">S</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                        <option value="extralarge">XL</option>
+                        <option value="extraextralarge">XXL</option>
+                        <option value="extraextraextralarge">XXXL</option>
+                    </select>
+                    <label for="cantidad-producto-mobile">Cantidad:</label>
+                    <input type="number" id="cantidad-producto-mobile" value="1" min="1">
+                    <button class="boton-compra-mobile">COMPRAR <i class="fa-solid fa-cart-plus fa-xs"></i></button>
+                </div>
+            </article>
+            <article class="producto-desktop d-none d-xl-block mb-5">
+                <img src="../img/shop/Hoodiev2.png" alt="Hoodie Spartan Gaming 2023">
+                <div class="info-producto-desktop">
+                    <div class="precio-producto-desktop">ARS$ 7.000,00</div>
+                    <h3>SPARTAN GAMING - HOODIE 2023</h3>
+                    <p class="descripcion-producto-desktop">Ahora también lleva la pilcha del equipo en épocas invernales con el nuevo hoodie de Spartan Gaming.</p>
+                    <button type="button" class="boton-tienda-detalle" data-bs-toggle="modal" data-bs-target="#modalhoodie"><i class="fa-solid fa-maximize"></i> DETALLES DEL PRODUCTO </button>
+                    <button type="button" class="boton-tienda-compra" data-bs-toggle="modal" data-bs-target="#modalbuyhoodie"> COMPRAR <i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </article>
+            <div class="modal fade" id="modalbuyhoodie" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalbuyhoodieLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title fs-5" id="modalbuyhoodieLabel">SPARTAN GAMING - HOODIE 2023</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text texto-talle" for="cantidad-item">CANTIDAD</label>
-                            <select class="form-select texto-drop" id="cantidad-item">
-                                <option selected>ELEGIR...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
+                        <div class="modal-body text-center">
+                            <div class="mb-5">
+                                <h5><i class="fa-solid fa-circle-check fa-xs"></i> TALLE:</h5>
+                                <div class="btn-group" role="group" aria-label="botonestalles">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-danger" for="btnradio1">S</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio2">M</label>
+                                  
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio3">L</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio4">XL</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio5">XXL</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                                    <label class="btn btn-outline-danger" for="btnradio6">XXXL</label>
+                                </div>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-circle-check fa-xs"></i> CANTIDAD:</h5>
+                                <input type="number" id="cantidad-producto-desktop" value="1" min="1">
+                            </div>
                         </div>
-                        <button type="button" class="btn btn-danger mx-auto d-block boton-compra">COMPRAR</button>
+                        <div class="modal-footer">
+                            <button type="button" class="boton-modal-cerrar" data-bs-dismiss="modal">CERRAR</button>
+                            <button type="button" class="boton-modal-addcart"> AGREGAR AL CARRITO <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalhoodie" tabindex="-1" aria-labelledby="modalhoodielabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title fs-5" id="modalhoodielabel">SPARTAN GAMING - HOODIE 2023</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <h5><i class="fa-solid fa-circle-info fa-xs"></i> DESCRIPCION DEL PRODUCTO</h5>
+                                <ul class="texto-modal">
+                                    <li>Buzo canguro con capucha</li>   
+                                    <li>Tela 100% algodón</li>
+                                    <li>Estilo unisex de corte recto</li> 
+                                    <li>Instrucciones de Lavado:
+                                        <ul>
+                                            <li>Lavar del réves</li>
+                                            <li>Lavar con agua fría</li>    
+                                            <li>Usar detergente suave</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-money-bill-wave fa-xs"></i> METODOS DE PAGO</h5>
+                                <ul class="texto-modal">
+                                    <li>Tarjetas de Crédito: <i class="fa-brands fa-cc-visa fa-xl"></i> / <i class="fa-brands fa-cc-mastercard fa-xl"></i> / <i class="fa-brands fa-cc-amex fa-xl"></i></li>
+                                    <li><i class="fa-sharp fa-solid fa-building-columns fa-lg"></i> Transferencia Bancaria</li>
+                                    <li><i class="fa-sharp fa-solid fa-coins fa-xl"></i></i> Efectivo</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5><i class="fa-sharp fa-solid fa-truck-fast fa-xs"></i> ENVIOS</h5>
+                                <ul class="texto-modal">
+                                    <li>Envíos a cualquier parte de Argentina a través de Andreani</li>
+                                    <li>Tiempo estimado de llegada del envío:
+                                        <ul>
+                                            <li><span class="text-decoration-underline">AMBA</span>: 3-5 días hábiles</li>
+                                            <li><span class="text-decoration-underline">Interior del País</span>: 7-10 días hábiles</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-envelope fa-xs"></i> POLÍTICA DE CAMBIOS</h5>
+                                <ul class="texto-modal">
+                                    <li>Ante la necesidad de solicitar un cambio por algún desperfecto de fábrica en la prenda o debido al talle de la misma, contactarse con <a class="text-danger" href="mailto: soporte@spartangaming.com">consultas@spartangaming.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary boton-modal-cerrar" data-bs-dismiss="modal">CERRAR</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="tienda-faq pb-5">
-            <article>
-                <h4>METODOS DE PAGO</h4>
-                <ul class="tienda-subtitulos">
-                    <li>
-                        Tarjetas de Crédito: VISA / MASTERCARD / AMERICAN EXPRESS
-                    </li>
-                    <li>
-                        Transferencia Bancaria
-                    </li>
-                    <li>
-                        MercadoPago
-                    </li>
-                    <li>
-                        Efectivo: PAGOFACIL / RAPIPAGO
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h4>ENVIOS</h4>
-                <ul class="tienda-subtitulos">
-                    <li>
-                        Envíos a cualquier parte de Argentina a través de Andreani
-                    </li>
-                    <li>
-                        Tiempo estimado de llegada del envío:
-                        <ul>
-                            <li>
-                                <span class="text-decoration-underline">AMBA</span>: 3-5 días hábiles
-                            </li>
-                            <li>
-                                <span class="text-decoration-underline">Interior del País</span>: 7-10 días hábiles
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h4>POLÍTICA DE CAMBIOS</h4>
-                <ul class="tienda-subtitulos">
-                    <li>
-                        Ante la necesidad de solicitar un cambio por algún desperfecto de fábrica en la prenda o debido al talle de la misma, contactarse con <a class="text-danger" href="mailto: soporte@spartangaming.com">soporte@spartangaming.com</a>
-                    </li>
-                </ul>
-            </article>
-            <div class="custom-shape-divider-bottom-1678596851">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-                </svg>
+        <section class="faq-mobile d-xl-none pb-4">
+            <div class="accordion acordeon-faq-mobile pb-5" id="faqMobile">
+                <h5>PREGUNTAS FRECUENTES</h5>
+                <article class="accordion-item acordeon-item-mobile">
+                    <h6 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="fa-solid fa-money-bill-wave fa-sm me-1"></i> METODOS DE PAGO</button>
+                    </h6>
+                    <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#faqMobile">
+                        <div class="accordion-body">
+                            <ul class="texto-faq-mobile">
+                                <li>Tarjetas: <i class="fa-brands fa-cc-visa fa-xl"></i> / <i class="fa-brands fa-cc-mastercard fa-xl"></i> / <i class="fa-brands fa-cc-amex fa-xl"></i></li>
+                                <li><i class="fa-sharp fa-solid fa-building-columns fa-lg"></i> Transferencia Bancaria</li>
+                                <li><i class="fa-sharp fa-solid fa-coins fa-xl"></i></i> Efectivo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="accordion-item acordeon-item-mobile">
+                    <h6 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><i class="fa-sharp fa-solid fa-truck-fast fa-sm me-1"></i> ENVIOS</button>
+                    </h6>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqMobile">
+                        <div class="accordion-body">
+                            <ul class="texto-faq-mobile">
+                                <li>Envíos a cualquier parte de Argentina a través de Andreani</li>
+                                <li>Tiempo estimado de llegada del envío:
+                                    <ul>
+                                        <li><span class="text-decoration-underline">AMBA</span>: 3-5 días hábiles</li>
+                                        <li><span class="text-decoration-underline">Interior del País</span>: 7-10 días hábiles</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="accordion-item acordeon-item-mobile">
+                    <h6 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"><i class="fa-solid fa-envelope fa-sm me-1"></i> POLITICA DE CAMBIOS</button>
+                    </h6>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqMobile">
+                        <div class="accordion-body">
+                            <ul class="texto-faq-mobile">
+                                <li>Ante la necesidad de solicitar un cambio por algún desperfecto de fábrica en la prenda o debido al talle de la misma, contactarse con <a class="text-danger" href="mailto: soporte@spartangaming.com">consultas@spartangaming.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
+        <div class="custom-shape-divider-bottom-1678596851">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
     </main>
 
     <!-- PIE DE PAGINA -->
