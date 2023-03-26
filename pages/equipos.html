@@ -9,6 +9,7 @@
     <meta name="keywords" content="Spartan Gaming, Esports, League of Legends, Valorant, CSGO, Rosters, Jugadores">
     <link rel="icon" href="../img/teamsicons/SG ICON.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f4704f0792.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css">
 </head>
     
@@ -51,39 +52,86 @@
     <main class="equipos">
         <h1>ROSTERS SPARTAN GAMING TEMPORADA 2023</h1>
         <section class="equipos-lol">
-            <img src="../img/gamelogos/League-of-Legends-Logo-2009-2019.png" class="logo-lol mx-auto d-block" alt="Logo League of Legends">
-            <img src="../img/webimg/Roster.jpg" class="roster-lol mx-auto d-block rounded" alt="Roster LoL 2023">
-            <div class="players-lol">
-                <h2 class="players-lol-titulo">ROSTER</h2>
-                <h2 class="players-lol-subtitulo">LEAGUE OF LEGENDS 2023</h2>
-                <ul>
-                    <li>
-                        <span class="text-warning text-decoration-underline">Toplaner</span>: Gianfranco <span class="text-info">"GianKios"</span> Casanova
-                    </li>
-                    <li>
-                        <span class="text-warning text-decoration-underline">Jungla</span>: Tomás <span class="text-info">"KinG"</span> Bordón
-                    </li>
-                    <li>
-                        <span class="text-warning text-decoration-underline">Midlane</span>: Nicolás <span class="text-info">"TopLop"</span> Marinoni
-                    </li>
-                    <li>
-                        <span class="text-warning text-decoration-underline">AD Carry</span>: Brandon <span class="text-info">"Nothing"</span> Merlo
-                    </li>
-                    <li>
-                        <span class="text-warning text-decoration-underline">Support</span>: Agustín <span class="text-info">"Shmebu"</span> Valetti
-                    </li>
-                    <li>
-                        <span class="text-warning text-decoration-underline">Head Coach</span>: Eduardo <span class="text-info">"Skin"</span> Saldaña
-                    </li>
-                </ul>
-            </div>
+            <img src="../img/gamelogos/logolol.webp" class="logo-lol mx-auto d-block" alt="Logo League of Legends">
+            <article class="players-lol" id="top">
+                <div class="players-lol-inner">
+                    <div class="players-lol-inner-frente" id="top-frente">
+                        <i class="fa-solid fa-arrows-rotate fa-xl d-xl-none"></i>
+                        <p class="posicion-player">TOPLANER</p>
+                    </div>
+                    <div class="players-lol-inner-detras">
+                        <img src="../img/roster/giankios.webp" alt="Jugador Giankios">
+                        <p class="nombre-player">Gianfranco <span class="text-primary">"GianKios"</span> Casanova</p>
+                    </div>
+                </div>
+            </article>
+            <article class="players-lol" id="jungla">
+                <div class="players-lol-inner">
+                    <div class="players-lol-inner-frente" id="jungla-frente">
+                        <i class="fa-solid fa-arrows-rotate fa-xl d-xl-none"></i>
+                        <p class="posicion-player">JUNGLA</p>
+                    </div>
+                    <div class="players-lol-inner-detras">
+                        <img src="../img/roster/kingi.webp" alt="Jugador King">
+                        <p class="nombre-player">Tomas <span class="text-primary">"KinG"</span> Bordon</p>
+                    </div>
+                </div>
+            </article>
+            <article class="players-lol" id="mid">
+                <div class="players-lol-inner">
+                    <div class="players-lol-inner-frente" id="mid-frente">
+                        <i class="fa-solid fa-arrows-rotate fa-xl d-xl-none"></i>
+                        <p class="posicion-player">MIDLANER</p>
+                    </div>
+                    <div class="players-lol-inner-detras">
+                        <img src="../img/roster/chordy.webp" alt="Jugador Chordy">
+                        <p class="nombre-player">Rodrigo <span class="text-primary">"Chordy"</span> Cerrudo</p>
+                    </div>
+                </div>
+            </article>
+            <article class="players-lol" id="adc">
+                <div class="players-lol-inner">
+                    <div class="players-lol-inner-frente" id="adc-frente">
+                        <i class="fa-solid fa-arrows-rotate fa-xl d-xl-none"></i>
+                        <p class="posicion-player">AD CARRY</p>
+                    </div>
+                    <div class="players-lol-inner-detras">
+                        <img src="../img/roster/nothing.webp" alt="Jugador Nothing">
+                        <p class="nombre-player">Brandon <span class="text-primary">"Nothing"</span> Merlo</p>
+                    </div>
+                </div>
+            </article>
+            <article class="players-lol" id="support">
+                <div class="players-lol-inner">
+                    <div class="players-lol-inner-frente" id="support-frente">
+                        <i class="fa-solid fa-arrows-rotate fa-xl d-xl-none"></i>
+                        <p class="posicion-player">SUPPORT</p>
+                    </div>
+                    <div class="players-lol-inner-detras">
+                        <img src="../img/roster/shmebu.webp" alt="Jugador Shmebu">
+                        <p class="nombre-player">Agustin <span class="text-primary">"Shmebu"</span> Valetti</p>
+                    </div>
+                </div>
+            </article>
+            <article class="players-lol" id="coach">
+                <div class="players-lol-inner">
+                    <div class="players-lol-inner-frente" id="coach-frente">
+                        <i class="fa-solid fa-arrows-rotate fa-xl d-xl-none"></i>
+                        <p class="posicion-player">HEAD COACH</p>
+                    </div>
+                    <div class="players-lol-inner-detras">
+                        <img src="../img/roster/skin.webp" alt="Coach Skin">
+                        <p class="nombre-player">Eduardo <span class="text-primary">"Skin"</span> Saldaña</p>
+                    </div>
+                </div>
+            </article>
         </section>
         <section class="equipos-valo">
-            <img src="../img/gamelogos/1280px-Valorant_logo_-_pink_color_version.svg.png" class="mx-auto d-block" alt="Logo Valorant">
+            <img src="../img/gamelogos/logovalo.webp" class="mx-auto d-block" alt="Logo Valorant">
             <h2>PROXIMAMENTE</h2>
         </section>
         <section class="equipos-csgo pb-5">
-            <img src="../img/gamelogos/60898640d598a5000448eab8.png" class="mx-auto d-block" alt="Logo CSGO">
+            <img src="../img/gamelogos/logocsgo.webp" class="mx-auto d-block" alt="Logo CSGO">
             <h2>PROXIMAMENTE</h2>
         </section>
         <div class="custom-shape-divider-bottom-1678596851">

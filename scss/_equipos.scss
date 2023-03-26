@@ -11,7 +11,7 @@
     h1 {
         color: variables.$mainWhite;
         font-family: variables.$fontAlfa;
-        font-size: variables.$sizeTitulo;
+        font-size: variables.$sizeSubtitulo;
         padding-top: 20px;
         text-shadow: variables.$sombraTitulo;
         text-align: center;
@@ -22,57 +22,196 @@
     }
 
     .equipos-lol {
-        @include flex-column-gap;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 2px solid variables.$mainWhite;
+
+        @include desktop {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 350px 350px 350px;
+            grid-template-rows: 250px 500px 500px;
+            grid-template-areas: 
+                "logo   logo    logo"
+                "topl   jungla  midl"
+                "adc    sup     coach";
+        }
 
         .logo-lol {
-            width: 50vw;
-
+            width: 60vw;
+        
             @include desktop {
+                grid-area: logo;
                 width: 30vw;
             }
         }
 
-        .roster-lol {
-            width: 80vw;
-
+        #top {
             @include desktop {
-                width: 50vw;
+                margin-left: 55px;
+                grid-area: topl;
+            }
+        }
+
+        #jungla {
+            @include desktop {
+                margin-left: 55px;
+                grid-area: jungla;
+            }
+        }
+
+        #mid {
+            @include desktop {
+                margin-left: 55px;
+                grid-area: midl;
+            }
+        }
+
+        #adc {
+            @include desktop {
+                margin-left: 55px;
+                grid-area: adc;
+            }
+        }
+
+        #support {
+            @include desktop {
+                margin-left: 55px;
+                grid-area: sup;
+            }
+        }
+
+        #coach {
+            @include desktop {
+                margin-left: 55px;
+                grid-area: coach;
             }
         }
 
         .players-lol {
-            border-bottom: 2px solid variables.$mainWhite;
-
-            .players-lol-titulo,
-            .players-lol-subtitulo {
-                color: variables.$subWhite;
-                font-family: variables.$fontArchivo;
-                font-size: 1.4em;
-                text-align: center;
-                text-decoration: underline;
-
-                @include desktop {
-                    font-size: variables.$sizeTitulo;
+            background-color: transparent;
+            width: 200px;
+            height: 400px;
+            perspective: 1000px;
+    
+            @include desktop {
+                width: 250px;
+                height: 470px;
+            }
+    
+            &:hover {
+                .players-lol-inner {
+                    transform: rotateY(180deg);
                 }
             }
+    
+            .players-lol-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+    
+            .players-lol-inner-frente,
+            .players-lol-inner-detras {
+                box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border: 1px solid variables.$mainRed;
+                border-radius: 1em;
+            }
+    
+            .players-lol-inner-frente {
+                i {
+                    position: absolute;
+                    left: 5%;
+                    top: 5%;
+                    color: variables.$mainRed;
+                }
 
-            ul {
-                padding: 0 1em;
-                margin-bottom: 30px;
-                list-style-type: none;
-                color: variables.$subWhite;
-                font-family: variables.$fontOswald;
-                font-size: 1.2em;
-
-                li {
-                    @include tablet {
-                        font-size: variables.$sizeSubtitulo;
-                        text-align: center;
-                    }
+                .posicion-player {
+                    margin-top: 350px;
+                    color: variables.$mainRed;
+                    font-family: variables.$fontTeko;
+                    font-size: 2.5em;
+                    text-shadow: 4px 4px 4px variables.$mainBlack;
 
                     @include desktop {
-                        font-size: variables.$sizeSubtitulo;
-                        text-align: center;
+                        margin-top: 400px;
+                        font-size: 3.5em;
+                    }
+                }
+            }
+    
+            #top-frente {
+                background-image: url(../img/roster/camille.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: right;
+            }
+    
+            #jungla-frente {
+                background-image: url(../img/roster/leesin.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+            #mid-frente {
+                background-image: url(../img/roster/azir.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: right;
+            }
+    
+            #adc-frente {
+                background-image: url(../img/roster/ezreal.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: right;
+            }
+    
+            #support-frente {
+                background-image: url(../img/roster/thresh.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+            #coach-frente {
+                background-image: url(../img/roster/coach.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    
+            .players-lol-inner-detras {
+                background-color: variables.$mainBlack;
+                transform: rotateY(180deg);
+
+                .nombre-player {
+                    margin-top: 10px;
+                    color: variables.$mainRed;
+                    font-family: variables.$fontKanit;
+                    font-size: 2.1em;
+                    line-height: 35px;
+
+                    @include desktop {
+                        font-size: 2.7em;
+                        line-height: 40px;
+                        padding-bottom: 15px;
                     }
                 }
             }
@@ -94,7 +233,7 @@
         h2 {
             color: variables.$subWhite;
             font-family: variables.$fontKanit;
-            font-size: 2.5em;
+            font-size: variables.$sizeSubtitulo;
             padding-bottom: 10px;
             border-bottom: 2px solid variables.$mainWhite;
             text-align: center;
@@ -123,7 +262,7 @@
         h2 {
             color: variables.$subWhite;
             font-family: variables.$fontKanit;
-            font-size: 2.5em;
+            font-size: variables.$sizeSubtitulo;
             text-align: center;
 
             @include desktop {

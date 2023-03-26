@@ -435,7 +435,7 @@ body {
 .equipos h1 {
   color: #EEEEEE;
   font-family: "Alfa Slab One", cursive;
-  font-size: 3em;
+  font-size: 2em;
   padding-top: 20px;
   text-shadow: 5px 5px 5px #303841;
   text-align: center;
@@ -448,59 +448,174 @@ body {
 .equipos .equipos-lol {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #EEEEEE;
+}
+@media screen and (min-width: 1200px) {
+  .equipos .equipos-lol {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 250px 500px 500px;
+    grid-template-areas: "logo   logo    logo" "topl   jungla  midl" "adc    sup     coach";
+  }
 }
 .equipos .equipos-lol .logo-lol {
-  width: 50vw;
+  width: 60vw;
 }
 @media screen and (min-width: 1200px) {
   .equipos .equipos-lol .logo-lol {
+    grid-area: logo;
     width: 30vw;
   }
 }
-.equipos .equipos-lol .roster-lol {
-  width: 80vw;
+@media screen and (min-width: 1200px) {
+  .equipos .equipos-lol #top {
+    margin-left: 55px;
+    grid-area: topl;
+  }
 }
 @media screen and (min-width: 1200px) {
-  .equipos .equipos-lol .roster-lol {
-    width: 50vw;
+  .equipos .equipos-lol #jungla {
+    margin-left: 55px;
+    grid-area: jungla;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .equipos .equipos-lol #mid {
+    margin-left: 55px;
+    grid-area: midl;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .equipos .equipos-lol #adc {
+    margin-left: 55px;
+    grid-area: adc;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .equipos .equipos-lol #support {
+    margin-left: 55px;
+    grid-area: sup;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .equipos .equipos-lol #coach {
+    margin-left: 55px;
+    grid-area: coach;
   }
 }
 .equipos .equipos-lol .players-lol {
-  border-bottom: 2px solid #EEEEEE;
+  background-color: transparent;
+  width: 200px;
+  height: 400px;
+  perspective: 1000px;
 }
-.equipos .equipos-lol .players-lol .players-lol-titulo,
-.equipos .equipos-lol .players-lol .players-lol-subtitulo {
-  color: #EAEAEA;
-  font-family: "Archivo Black", sans-serif;
-  font-size: 1.4em;
+@media screen and (min-width: 1200px) {
+  .equipos .equipos-lol .players-lol {
+    width: 250px;
+    height: 470px;
+  }
+}
+.equipos .equipos-lol .players-lol:hover .players-lol-inner {
+  transform: rotateY(180deg);
+}
+.equipos .equipos-lol .players-lol .players-lol-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  text-decoration: underline;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.equipos .equipos-lol .players-lol .players-lol-inner-frente,
+.equipos .equipos-lol .players-lol .players-lol-inner-detras {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #D72323;
+  border-radius: 1em;
+}
+.equipos .equipos-lol .players-lol .players-lol-inner-frente i {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  color: #D72323;
+}
+.equipos .equipos-lol .players-lol .players-lol-inner-frente .posicion-player {
+  margin-top: 350px;
+  color: #D72323;
+  font-family: "Teko", sans-serif;
+  font-size: 2.5em;
+  text-shadow: 4px 4px 4px #02010E;
 }
 @media screen and (min-width: 1200px) {
-  .equipos .equipos-lol .players-lol .players-lol-titulo,
-  .equipos .equipos-lol .players-lol .players-lol-subtitulo {
-    font-size: 3em;
+  .equipos .equipos-lol .players-lol .players-lol-inner-frente .posicion-player {
+    margin-top: 400px;
+    font-size: 3.5em;
   }
 }
-.equipos .equipos-lol .players-lol ul {
-  padding: 0 1em;
-  margin-bottom: 30px;
-  list-style-type: none;
-  color: #EAEAEA;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.2em;
+.equipos .equipos-lol .players-lol #top-frente {
+  background-image: url(../img/roster/camille.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .equipos .equipos-lol .players-lol ul li {
-    font-size: 2em;
-    text-align: center;
-  }
+.equipos .equipos-lol .players-lol #jungla-frente {
+  background-image: url(../img/roster/leesin.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.equipos .equipos-lol .players-lol #mid-frente {
+  background-image: url(../img/roster/azir.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.equipos .equipos-lol .players-lol #adc-frente {
+  background-image: url(../img/roster/ezreal.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.equipos .equipos-lol .players-lol #support-frente {
+  background-image: url(../img/roster/thresh.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.equipos .equipos-lol .players-lol #coach-frente {
+  background-image: url(../img/roster/coach.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.equipos .equipos-lol .players-lol .players-lol-inner-detras {
+  background-color: #02010E;
+  transform: rotateY(180deg);
+}
+.equipos .equipos-lol .players-lol .players-lol-inner-detras .nombre-player {
+  margin-top: 10px;
+  color: #D72323;
+  font-family: "Kanit", sans-serif;
+  font-size: 2.1em;
+  line-height: 35px;
 }
 @media screen and (min-width: 1200px) {
-  .equipos .equipos-lol .players-lol ul li {
-    font-size: 2em;
-    text-align: center;
+  .equipos .equipos-lol .players-lol .players-lol-inner-detras .nombre-player {
+    font-size: 2.7em;
+    line-height: 40px;
+    padding-bottom: 15px;
   }
 }
 .equipos .equipos-valo {
@@ -520,7 +635,7 @@ body {
 .equipos .equipos-valo h2 {
   color: #EAEAEA;
   font-family: "Kanit", sans-serif;
-  font-size: 2.5em;
+  font-size: 2em;
   padding-bottom: 10px;
   border-bottom: 2px solid #EEEEEE;
   text-align: center;
@@ -551,7 +666,7 @@ body {
 .equipos .equipos-csgo h2 {
   color: #EAEAEA;
   font-family: "Kanit", sans-serif;
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
@@ -1152,6 +1267,12 @@ body {
   width: 35%;
   letter-spacing: 0.5px;
 }
+@media screen and (min-width: 1200px) {
+  .footer .inner-footer .footer-form #submit {
+    width: 25%;
+    font-size: 1.1em;
+  }
+}
 .footer .inner-footer .patrocinadores {
   width: 90%;
   padding: 10px;
@@ -1203,6 +1324,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer .inner-footer .redes-sociales {
     grid-area: redes;
+    font-size: 15px;
   }
 }
 .footer .inner-footer .redes-sociales .redes-logos {

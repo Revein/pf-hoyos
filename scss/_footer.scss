@@ -59,6 +59,11 @@
                 font-size: .7em;
                 width: 35%;
                 letter-spacing: .5px;
+
+                @include desktop {
+                    width: 25%;
+                    font-size: 1.1em;
+                }
             }
         }
 
@@ -115,6 +120,7 @@
 
             @include desktop {
                 grid-area: redes;
+                font-size: 15px;
             }
 
             .redes-logos {
